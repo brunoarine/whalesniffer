@@ -1,0 +1,1289 @@
+[
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 270.0,
+                "width": 415.0,
+                "x": 224.0,
+                "y": 137.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_0.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 143.0,
+                "width": 319.0,
+                "x": 276.0,
+                "y": 174.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_1.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 148.0,
+                "width": 342.0,
+                "x": 167.0,
+                "y": 199.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_2.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 222.0,
+                "width": 220.0,
+                "x": 196.0,
+                "y": 43.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_3.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 268.0,
+                "width": 99.0,
+                "x": 266.0,
+                "y": 127.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_4.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 200.0,
+                "width": 200.0,
+                "x": 150.0,
+                "y": 1.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_5.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 131.0,
+                "width": 355.0,
+                "x": 1.0,
+                "y": 109.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_6.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 157.0,
+                "width": 203.0,
+                "x": 166.0,
+                "y": 89.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_7.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 220.0,
+                "width": 311.0,
+                "x": 328.0,
+                "y": 206.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_8.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 179.0,
+                "width": 154.0,
+                "x": 226.0,
+                "y": 246.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_9.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 108.0,
+                "width": 227.0,
+                "x": 1.0,
+                "y": 227.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_10.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 286.0,
+                "width": 76.0,
+                "x": 314.0,
+                "y": 1.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_11.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 112.0,
+                "width": 230.0,
+                "x": 295.0,
+                "y": 162.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_12.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 145.0,
+                "width": 340.0,
+                "x": 46.0,
+                "y": 181.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_13.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 134.0,
+                "width": 214.0,
+                "x": 256.0,
+                "y": 213.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_14.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 279.0,
+                "width": 298.0,
+                "x": 214.0,
+                "y": 121.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_15.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 248.0,
+                "width": 121.0,
+                "x": 166.0,
+                "y": 179.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_16.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 163.0,
+                "width": 77.0,
+                "x": 275.0,
+                "y": 133.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_17.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 250.0,
+                "width": 146.0,
+                "x": 269.0,
+                "y": 180.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_18.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 183.0,
+                "width": 342.0,
+                "x": 254.0,
+                "y": 95.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_19.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 309.0,
+                "width": 146.0,
+                "x": 169.0,
+                "y": -1.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_20.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 163.0,
+                "width": 288.0,
+                "x": 20.0,
+                "y": 113.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_21.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 129.0,
+                "width": 196.0,
+                "x": 134.0,
+                "y": 131.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_22.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 157.0,
+                "width": 280.0,
+                "x": 84.0,
+                "y": 236.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_23.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 155.0,
+                "width": 290.0,
+                "x": 137.0,
+                "y": 181.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_24.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 137.0,
+                "width": 368.0,
+                "x": 0.0,
+                "y": 123.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_25.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 234.0,
+                "width": 155.0,
+                "x": 228.0,
+                "y": 19.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_26.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 132.0,
+                "width": 362.0,
+                "x": 0.0,
+                "y": 106.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_27.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 80.0,
+                "width": 309.0,
+                "x": 244.0,
+                "y": 163.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_28.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 257.0,
+                "width": 165.0,
+                "x": 188.0,
+                "y": 169.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_29.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 219.0,
+                "width": 169.0,
+                "x": 126.0,
+                "y": 32.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_30.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 188.0,
+                "width": 140.0,
+                "x": 248.0,
+                "y": 83.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_31.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 84.0,
+                "width": 285.0,
+                "x": 279.0,
+                "y": 66.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_32.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 71.0,
+                "width": 325.0,
+                "x": 218.0,
+                "y": 195.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_33.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 111.0,
+                "width": 333.0,
+                "x": 301.0,
+                "y": 141.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_34.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 286.0,
+                "width": 144.0,
+                "x": 212.0,
+                "y": 140.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_35.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 243.0,
+                "width": 276.0,
+                "x": 8.0,
+                "y": 182.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_36.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 262.0,
+                "width": 279.0,
+                "x": 117.0,
+                "y": 2.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_37.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 126.0,
+                "width": 97.0,
+                "x": 294.0,
+                "y": 216.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_38.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 78.0,
+                "width": 142.0,
+                "x": 243.0,
+                "y": 94.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_39.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 91.0,
+                "width": 263.0,
+                "x": 53.0,
+                "y": 164.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_40.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 177.0,
+                "width": 125.0,
+                "x": 242.0,
+                "y": 112.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_41.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 248.0,
+                "width": 120.0,
+                "x": 309.0,
+                "y": 177.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_42.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 176.0,
+                "width": 292.0,
+                "x": 257.0,
+                "y": 70.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_43.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 209.0,
+                "width": 293.0,
+                "x": 71.0,
+                "y": 67.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_44.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 193.0,
+                "width": 59.0,
+                "x": 336.0,
+                "y": 0.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_45.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 70.0,
+                "width": 400.0,
+                "x": 113.0,
+                "y": 138.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_46.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 178.0,
+                "width": 99.0,
+                "x": 253.0,
+                "y": 91.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_47.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 308.0,
+                "width": 153.0,
+                "x": 171.0,
+                "y": 117.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_48.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 266.0,
+                "width": 382.0,
+                "x": 0.0,
+                "y": 19.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_49.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 210.0,
+                "width": 120.0,
+                "x": 268.0,
+                "y": 1.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_50.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 175.0,
+                "width": 257.0,
+                "x": 270.0,
+                "y": 252.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_51.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 67.0,
+                "width": 364.0,
+                "x": 12.0,
+                "y": 235.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_52.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 216.0,
+                "width": 268.0,
+                "x": 128.0,
+                "y": 174.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_53.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 137.0,
+                "width": 72.0,
+                "x": 373.0,
+                "y": 49.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_54.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 178.0,
+                "width": 305.0,
+                "x": 0.0,
+                "y": 58.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_55.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 220.0,
+                "width": 321.0,
+                "x": 233.0,
+                "y": 204.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_56.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 154.0,
+                "width": 366.0,
+                "x": 192.0,
+                "y": 122.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_57.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 362.0,
+                "width": 279.0,
+                "x": 218.0,
+                "y": 63.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_58.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 208.0,
+                "width": 328.0,
+                "x": 160.0,
+                "y": 127.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_59.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 218.0,
+                "width": 126.0,
+                "x": 153.0,
+                "y": 92.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_60.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 111.0,
+                "width": 318.0,
+                "x": 175.0,
+                "y": 259.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_61.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 261.0,
+                "width": 198.0,
+                "x": 105.0,
+                "y": 165.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_62.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 97.0,
+                "width": 275.0,
+                "x": 213.0,
+                "y": 248.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_63.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 228.0,
+                "width": 359.0,
+                "x": 273.0,
+                "y": 156.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_64.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 173.0,
+                "width": 443.0,
+                "x": 74.0,
+                "y": 221.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_65.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 246.0,
+                "width": 418.0,
+                "x": 190.0,
+                "y": 7.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_66.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 85.0,
+                "width": 207.0,
+                "x": 276.0,
+                "y": 162.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_67.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 80.0,
+                "width": 377.0,
+                "x": 40.0,
+                "y": 141.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_68.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 201.0,
+                "width": 115.0,
+                "x": 274.0,
+                "y": -2.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_69.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 195.0,
+                "width": 83.0,
+                "x": 328.0,
+                "y": 121.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_70.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 287.0,
+                "width": 249.0,
+                "x": 266.0,
+                "y": 139.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_71.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 124.0,
+                "width": 343.0,
+                "x": 29.0,
+                "y": 221.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_72.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 270.0,
+                "width": 88.0,
+                "x": 212.0,
+                "y": 156.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_73.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 246.0,
+                "width": 209.0,
+                "x": 303.0,
+                "y": 1.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_74.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 87.0,
+                "width": 179.0,
+                "x": 276.0,
+                "y": 139.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_75.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 276.0,
+                "width": 357.0,
+                "x": 195.0,
+                "y": 143.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_76.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 229.0,
+                "width": 162.0,
+                "x": 167.0,
+                "y": 72.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_77.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 62.0,
+                "width": 191.0,
+                "x": 270.0,
+                "y": 216.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_78.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 110.0,
+                "width": 70.0,
+                "x": 266.0,
+                "y": 120.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_79.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 217.0,
+                "width": 322.0,
+                "x": 127.0,
+                "y": 19.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_80.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 242.0,
+                "width": 217.0,
+                "x": 284.0,
+                "y": 183.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_81.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 110.0,
+                "width": 344.0,
+                "x": 268.0,
+                "y": 224.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_82.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 169.0,
+                "width": 90.0,
+                "x": 259.0,
+                "y": 35.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_83.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 83.0,
+                "width": 253.0,
+                "x": 131.0,
+                "y": 147.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_84.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 65.0,
+                "width": 273.0,
+                "x": 137.0,
+                "y": 214.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_85.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 85.0,
+                "width": 286.0,
+                "x": 331.0,
+                "y": 172.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_86.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 175.0,
+                "width": 365.0,
+                "x": 0.0,
+                "y": 165.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_87.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 226.0,
+                "width": 123.0,
+                "x": 240.0,
+                "y": 99.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_88.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 96.0,
+                "width": 351.0,
+                "x": 0.0,
+                "y": 75.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_89.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 179.0,
+                "width": 215.0,
+                "x": 41.0,
+                "y": 117.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_90.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 201.0,
+                "width": 75.0,
+                "x": 243.0,
+                "y": 0.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_91.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 203.0,
+                "width": 157.0,
+                "x": 254.0,
+                "y": 69.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_92.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 197.0,
+                "width": 291.0,
+                "x": 148.0,
+                "y": 125.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_93.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 213.0,
+                "width": 152.0,
+                "x": 289.0,
+                "y": 65.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_94.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 181.0,
+                "width": 84.0,
+                "x": 240.0,
+                "y": 95.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_95.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 235.0,
+                "width": 254.0,
+                "x": 92.0,
+                "y": 176.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_96.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 149.0,
+                "width": 233.0,
+                "x": 271.0,
+                "y": 176.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_97.png"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 210.0,
+                "width": 214.0,
+                "x": 170.0,
+                "y": 85.0
+            }
+        ],
+        "class": "image",
+        "filename": "c:\\temp\\small\\w_98.png"
+    }
+]

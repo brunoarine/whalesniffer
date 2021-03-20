@@ -1,0 +1,16 @@
+# documentos
+*.odt
+*.txt
+*.rtf
+*.html
+*.svg
+*.odg
+*.odp
+*.docx
+
+# lixos
+*.bak
+
+# compilados
+*.pyc
+

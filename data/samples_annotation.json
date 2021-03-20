@@ -1,0 +1,80 @@
+[
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 303.0,
+                "width": 450.0,
+                "x": 241.0,
+                "y": 147.0
+            }
+        ],
+        "class": "image",
+        "filename": "/home/soldeace/Dropbox/unesp/Disciplina de PDI/projeto de conclusao/samples/sample1.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 227.0,
+                "width": 262.0,
+                "x": 269.0,
+                "y": 59.0
+            }
+        ],
+        "class": "image",
+        "filename": "/home/soldeace/Dropbox/unesp/Disciplina de PDI/projeto de conclusao/samples/sample2.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 180.0,
+                "width": 351.0,
+                "x": -1.0,
+                "y": 118.0
+            }
+        ],
+        "class": "image",
+        "filename": "/home/soldeace/Dropbox/unesp/Disciplina de PDI/projeto de conclusao/samples/sample3.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 149.0,
+                "width": 430.0,
+                "x": 338.0,
+                "y": 159.0
+            }
+        ],
+        "class": "image",
+        "filename": "/home/soldeace/Dropbox/unesp/Disciplina de PDI/projeto de conclusao/samples/sample4.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 87.0,
+                "width": 380.0,
+                "x": 233.0,
+                "y": 199.0
+            }
+        ],
+        "class": "image",
+        "filename": "/home/soldeace/Dropbox/unesp/Disciplina de PDI/projeto de conclusao/samples/sample5.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 170.0,
+                "width": 236.0,
+                "x": 181.0,
+                "y": 50.0
+            }
+        ],
+        "class": "image",
+        "filename": "/home/soldeace/Dropbox/unesp/Disciplina de PDI/projeto de conclusao/samples/sample6.jpg"
+    }
+]
