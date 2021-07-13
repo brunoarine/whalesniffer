@@ -239,7 +239,7 @@ The most outstanding work concerning remote counting of right whales was done by
 As the present work does not have a relationship of true negatives, because the test photos always contain at least one individual, the statistics could not be summarized by the F1 metric, as is usual in works with classifiers.
 
 <p align="center">
-<img src="./doc/img/score_reference.png)">
+<img src="./doc/img/score_reference.png">
 </p>
 
 _Precision values obtained by the algorithms of this study and the study by Fretwell et al. (2014). The bold lines represent the best performances of both._
