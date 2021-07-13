@@ -76,7 +76,7 @@ Thus, for the sake of simplicity, I decided to apply a medium filter to the sele
 Given the angle of incidence and nature of the photographic equipment used to acquire the images, there is a sharp shading close to the edges of the image in some of the photos. This shading is known as "vignette," easily seen especially in channel V (intensity) as a dark gradient. This phenomenon makes searching for a global threshold of image thresholding difficult since the histogram of intensity values ​​starts to bear an extra region formed by the shading pixels, as shown in the figure below.
 
 <p align="center">
-<img src="./doc/img/vignette.png">
+<img src="./doc/img/thresholding.png">
 _Example of thresholding by Otsu method in an image with vignette._
 </p>
 
