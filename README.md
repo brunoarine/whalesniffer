@@ -27,7 +27,9 @@ The delimitation of the region of interest in the photos for the vicinity of the
 
 The general scheme of the project proposed in this work is shown in the flowchart of Figure 3.
 
+<p align="center">
 ![](./doc/img/fluxogram.png)
+</p>
 
 ### 1) Channel decomposition
 
