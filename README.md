@@ -86,13 +86,13 @@ Given the angle of incidence and nature of the photographic equipment used to ac
 
 Typically, vignette correction is done by subtracting the pixel values ​​from the original image by the pixel values from a white background image obtained with the same photographic equipment and under the same lighting conditions. If reference images are not available, the process of correcting the vignette, depending on the final objective, becomes much more complex. One method, for example, involves using a mixture of Gaussian models to determine the nature of each pixel and obtain the separation between the vignette and the image itself (CHEN et al., 2013).
 
-However, for this work, I chose a significantly more straightforward solution. Using channel V as a reference, the image was blurred through 2D convolution with a Gaussian mask. Immediately, it is noticed that the region where there is shading stands out from the rest of the image, which has lighter lighting ( Figure 8 b ).
+However, for this work, I chose a significantly more straightforward solution. Using channel V as a reference, the image was blurred through 2D convolution with a Gaussian mask. Immediately, it is noticed that the region where there is shading stands out from the rest of the image, which has lighter lighting.
 
 I noticed experimentally that this Gaussian filter produced a more subtle gradient due to the nature of the mask, in contrast to the square mask of the medium filter, which creates distinct bands in the image.
 
 Image correction takes place entirely on channel V, using the formula.
 
-$$ O = I - I \dot G + 128 $$
+<img src="https://latex.codecogs.com/gif.latex?O_t=O = I - I \dot G + 128" />
 
 where I is channel V, and G is the Gaussian convolution mask. An example of a result can be seen in the image below.
 
