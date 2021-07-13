@@ -2,11 +2,11 @@
 
 The North Atlantic Right Whale (_Eubalenae glacialis_) is currently represented by no more than 500 individuals globally. Thus, obtaining information about each individual's health and conditions is urgent so that preservation entities can protect them from extinction in the company of the scientific community. To track and monitor the population, experts photograph right whales by aerial survey and manually compared them with an online photo-identification catalog. The identification process takes time, making individual tracking for biological sampling, acoustic recording, and various relevant medical assessments difficult. Currently, only a few professionals can visually identify each whale present in the photos when they emerge. That sounds like an excellent job for machine learning! ;)
 
-## A word on the training material
+## Objective
 
-For every machine learning model, regardless of the task for which it was designed, the degree of performance is directly related to the quantity and quality of the training material. The amount, of course, is given by the size of the population that makes up the material. Quality refers to the relevance of the parameters provided and the signal-to-noise ratio of the samples (represented by the number of false positives detected).
+In 2015, Kaggle and NOAA (National Oceanic and Atmospheric Administration) made available more than 8 gigabytes of images, free of charge, in a contest for the development of algorithms capable of individually identifying each whale specimen contained in the photos. The problem is that the images were not annotated.
 
-The images used during the process of researching the most appropriate methods and the general elaboration of the algorithm were composed of a subset of 100 photographs made available by the Kaggle website (2015) together with the NOAA (National Oceanic and Atmospheric Administration), where more than 8 gigabytes of images are made available free of charge as a result of a proposed contest for the development of algorithms capable of individually identifying each specimen contained in the photos. All photos have been reduced to 800 pixels in height by 1000 pixels in width.
+So this project is an attempt at tackling the first step of an image recognition pipeline, the annotation step. The algorithm in this project attempts to detect whales in aerial images.
 
 ## Used tools
 
@@ -26,7 +26,7 @@ The general scheme of the project proposed in this work is shown in the flowchar
 
 ### 1) Channel decomposition
 
-The color space defined by channels R, G, and B is sensitive to variations in lighting and the presence of shadows and reflections in the photographed environment. However, the photos available for this work were taken under different conditions of climate, time of day, lighting, and angle of incidence of the sun. In addition to these natural factors, it is noted that the camera is probably not the same since some images have different resolutions between them.
+The color space defined by channels R, G, and B is sensitive to variations in lighting, shadows, and glare in the photographed environment. However, the photos available for this work were taken under different conditions of climate, time of day, lighting, and angle of incidence of the sun. In addition to these natural factors, it is noted that the camera is probably not the same since some images have different resolutions between them.
 
 To ensure that there is a pattern in the overall brightness and hue of the images, I preferred to prioritize color spaces that are invariant to most of these factors. The table below lists the invariance quality of some of these color spaces.
 
@@ -36,11 +36,11 @@ To ensure that there is a pattern in the overall brightness and hue of the image
 
 During the tests, all models performed satisfactorily with the H and S channels of the HSV space, the a channel of the Lab space, and the Rn channel of the Normalized RGB space.
 
-This phenomenon has been attributed to the hypothesis that once seawater is intensely bluish concerning the whale, these elements will appear differently in the H channel due to the difference in hue. In photos taken on sunny days, the water shows a considerably more intense coloring, producing more saturated pixels and higher values ​​than the whale's pixels in the S channel. The R channel does not always prove to be the best option for the segmentation of the image. However, in some instances, the water region is almost wholly blackened in this channel, as there are no red tones in the water. This same effect occurs in channel a of the Lab space since this space separates the red from the blue in channels a and b, respectively, with the advantage that variations in lighting remain isolated in channel L.
+This phenomenon has been attributed to the hypothesis that once seawater is intensely bluish near the whale, these elements will appear differently in the H channel due to the difference in hue. In photos taken on sunny days, the water shows a considerably more intense color, producing more saturated pixels and higher values ​​than the whale's pixels in the S channel. The R channel does not always prove to be the best option for the segmentation of the image. However, in some instances, the water region is almost wholly blackened in this channel, as there are no red tones in the water. This same effect occurs in channel a of the Lab space since this space separates the red from the blue in channels a and b, respectively, with the advantage that variations in lighting remain isolated in channel L.
 
 ### 2) Removal of reflections and shadows in the waves
 
-Depending on the weather conditions and the time of day, the incident rays of the sun in the water ripples produce shadows and reflections that hinder the segmentation process, especially in the stage where the edges of the whale are tried to be found in the image (Figure 4 ).
+Depending on the weather conditions and the time of day, the incident rays of the sun in the water ripples produce shadows and reflections that hinder the segmentation process, especially in the stage where the edges of the whale are tried to be found in the image (figure below).
 
 <p align="center">
 <img src="./doc/img/channel_s.png">
