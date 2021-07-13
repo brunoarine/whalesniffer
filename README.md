@@ -1,3 +1,5 @@
+# Whalesniffer: right whale detection in aerial images
+
 The North Atlantic Right Whale (_Eubalenae glacialis_) is currently represented by no more than 500 individuals globally. Thus, obtaining information about each individual's health and conditions is of an urgent nature so that preservation entities, in the company of the scientific community, can protect them from extinction. To track and monitor the population, experts photograph right whales by aerial survey and manually compared them with an online photo-identification catalog. The identification process takes time, making individual tracking for biological sampling, acoustic recording, and various relevant medical assessments difficult. Currently, only a few professionals can visually identify each whale present in the photos when they emerge. That sounds like an excellent job for machine learning! ;)
 
 ## The 2015 Kaggle challenge
