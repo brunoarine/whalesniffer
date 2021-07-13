@@ -88,23 +88,23 @@ Image correction takes place entirely on channel V, using the formula O = I - Ix
 <em>a) image severely affected by the vignette effect, b) original image after applying the Gaussian filter, c) subtraction.</em>
 </p>
 
-It is noticed that the correction is not precise, but it considerably reduces the effect caused by the vignette during the thresholding process. Consequently, the image's contrast is visibly flattened but could be quickly normalized a posteriori.
+It is noticed that the correction is not precise, but it considerably reduces the effect caused by the vignette during the thresholding process. Consequently, the image's contrast is visibly flattened but could be quickly normalized later.
 
 ### 4) Choosing the least troubled channel
 
-As the threshold detection and contour detection algorithm uses only one channel as an input, I decided to create a method to choose the least troubled channel for the task automatically.
+As the threshold detection and contour detection algorithm uses only one channel as the input, I decided to create a method to choose the least troubled channel for the task automatically.
 
-The definition of an image's disturbance is arbitrary and subject to different interpretations. What was desired, evaluating the different image channels, was to find the one in which the separation between the front (whale) and bottom (water) elements was less complex as possible.
+The definition of an image's disturbance is arbitrary and subject to different interpretations. What was desired, evaluating the different image channels, was to find the one in which the separation between foreground (whale) and background (water) elements was as less complex as possible.
 
 There is no consensus on which would be the most objective measure to translate the degree of disturbance of an image. A first attempt to do so was based on second-order statistics calculated from the co-occurrence matrix: photographed objects tend to have a pixel-by-pixel correlation that, by definition, is not present in white noise. However, white noise does not necessarily disrupt the image segmentation process; above all, it is trivially removed with the application of a medium filter, for example. Thus, the correlation as a measure of disturbance is not appropriate in this case.
 
-In the context of this work, I realized that the whales some images were now amid a large foam swirling due to the movement or partially submerged s; in both cases, even without the presence of background noise in the image, the algorithm showed an unsatisfactory performance in the segmentation stage.
+In the context of this work, I noticed that the whales in some images were sometimes in the middle of a large vortex of foam due to movement, sometimes partially submerged; in both cases, even without the presence of background noise in the image, the algorithm showed an unsatisfactory performance in the segmentation step.
 
 ![](./doc/img/troubled_channel.png)
 
 _Water vapor expelled by the whale's spiracle confuses the thresholding algorithm._
 
-Given this fact, I decided to simulate raw edge detection in each candidate channel (as mentioned above, channels with more remarkable invariance to the difference in illumination had higher priority) by calculating the image gradient. Once the edges are detected, choose the one where the sum of the pixels of the image is smaller. In practical terms, this means selecting the channel that has the least interference.
+Given this fact, I decided to simulate a raw edge detection in each candidate channel (as mentioned above, channels with larger invariance to the difference in illumination had higher priority) by calculating the image gradient. Once the edges are detected, the algorithm chooses the channel where the sum of the pixels of the image is smaller. In practical terms, this means selecting the channel that has the least interference.
 
 ### 5) Segmentation and Edge detection method
 
