@@ -12,10 +12,6 @@ So this project is an attempt at tackling the first step of an image recognition
 
 The algorithms were written in Python 2.7.6 using the libraries Scikit-Image, OpenCV, and NumPy.
 
-## Breaking down the challenge
-
-The delimitation of the region of interest in the photos for the vicinity of the whale optimizes the results of a future head search algorithm; since it is not necessary to scan the entire image, the execution time, and the chances of dealing with false positives are reduced.
-
 ## Pre-processing plan
 
 The general scheme of the project proposed in this work is shown in the flowchart of Figure 3.
