@@ -37,7 +37,9 @@ The color space defined by channels R, G, and B is sensitive to variations in li
 
 To ensure that there is a pattern in the overall brightness and hue of the images, I preferred to prioritize color spaces that are invariant to most of these factors. The table below lists the invariance quality of some of these color spaces.
 
-![](./doc/img/variance.png)
+<p align="center">
+<img src="./doc/img/variance.png">
+</p>
 
 During the tests, all models performed satisfactorily with the H and S channels of the HSV space, the a channel of the Lab space, and the Rn channel of the Normalized RGB space.
 
@@ -47,17 +49,23 @@ This phenomenon has been attributed to the hypothesis that once seawater is inte
 
 Depending on the weather conditions and the time of day, the incident rays of the sun in the water ripples produce shadows and reflections that hinder the segmentation process, especially in the stage where the edges of the whale are tried to be found in the image (Figure 4 ).
 
-![](./doc/img/channel_s.png)
+<p align="center">
+<img src="./doc/img/channel_s.png">
+</p>
 
 It is clear that these unwanted artifacts in the image differ from the whale's body in size and frequency; while there is only one whale per photo occupying a large region of the image, the shadows and streaks are numerous and thin. One way to eliminate them would be through band filtering in the domain of the image frequencies, either by the Fourier transform or wavelet. An example of what such a process would look like is shown in the figure below.
 
-![](./doc/img/simulation.png)
+<p align="center">
+<img src="./doc/img/simulation.png">
+</p>
 
 _2D Fourier transform simulation on a) an image with geometric shapes and interference lines, b) interference lines only, and c) geometric shapes only._ 
 
 When applying the fast Fourier transform to a real photo and obtaining the power spectrum (squaring the real and imaginary part of the spectrum), the result is not intuitive enough for us to know which region of the spectrum to neutralize for that the desired interferences are eliminated (Figure 6 ).
 
-![](./doc/img/channel_s_fourier.png)
+<p align="center">
+<img src="./doc/img/channel_s_fourier.png">
+</p>
 
 _The Fourier transform of the image's S-channel does not immediately show clues as to how to eliminate ripples in the water._
 
@@ -67,8 +75,11 @@ Thus, for the sake of simplicity, I decided to apply a medium filter to the sele
 
 Given the angle of incidence and nature of the photographic equipment used to acquire the images, there is a sharp shading close to the edges of the image in some of the photos. This shading is known as "vignette," easily seen especially in channel V (intensity) as a dark gradient. This phenomenon makes searching for a global threshold of image thresholding difficult since the histogram of intensity values ​​starts to bear an extra region formed by the shading pixels, as shown in the figure below.
 
-![](./doc/img/vignette.png)
+<p align="center">
+<img src="./doc/img/vignette.png">
 _Example of thresholding by Otsu method in an image with vignette._
+</p>
+
 
 Typically, vignette correction is done by subtracting the pixel values ​​from the original image by the pixel values from a white background image obtained with the same photographic equipment and under the same lighting conditions. If reference images are not available, the process of correcting the vignette, depending on the final objective, becomes much more complex. One method, for example, involves using a mixture of Gaussian models to determine the nature of each pixel and obtain the separation between the vignette and the image itself (CHEN et al., 2013).
 
