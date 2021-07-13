@@ -65,9 +65,11 @@ When applying the fast Fourier transform to a real photo and obtaining the power
 
 <p align="center">
 <img src="./doc/img/channel_s_fourier.png">
+
+<em>The Fourier transform of the image's S-channel does not immediately show clues as to how to eliminate ripples in the water.</em>
 </p>
 
-_The Fourier transform of the image's S-channel does not immediately show clues as to how to eliminate ripples in the water._
+
 
 Thus, for the sake of simplicity, I decided to apply a medium filter to the selected channels before the execution of the segmentation processes, making sure that the mask used was larger than the size of the shadows and streaks that we would like to eliminate.
 
@@ -77,7 +79,8 @@ Given the angle of incidence and nature of the photographic equipment used to ac
 
 <p align="center">
 <img src="./doc/img/thresholding.png">
-_Example of thresholding by Otsu method in an image with vignette._
+
+<em>Example of thresholding by Otsu method in an image with vignette.</em>
 </p>
 
 
