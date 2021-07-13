@@ -100,7 +100,9 @@ There is no consensus on which would be the most objective measure to translate 
 
 In the context of this work, I noticed that the whales in some images were sometimes in the middle of a large vortex of foam due to movement, sometimes partially submerged; in both cases, even without the presence of background noise in the image, the algorithm showed an unsatisfactory performance in the segmentation step.
 
-![](./doc/img/troubled_channel.png)
+<p align="center">
+<img src="./doc/img/troubled_channel.png">
+</p>
 
 _Water vapor expelled by the whale's spiracle confuses the thresholding algorithm._
 
@@ -108,9 +110,11 @@ Given this fact, I decided to simulate a raw edge detection in each candidate ch
 
 ### 5) Segmentation and Edge detection method
 
-After checking which channel is less troubled (among H, S and R normalized, for this method), the image gradient is calculated,  then subjected to binarization using the Otsu method, as shown in figure 10.
+After checking which channel is less troubled (among H, S and normalized R), the image gradient is calculated, then subjected to binarization using the Otsu method, as shown in the figure below.
 
-![](./doc/img/edge_detection.png)
+<p align="center">
+<img src="./doc/img/edge_detection.png">
+</p>
 
 _The most appropriate channel was selected, in this example being the H channel. Then it is filtered, its gradient is calculated, and then thresholded._
 
@@ -118,7 +122,9 @@ If the reference image chosen was the normalized R channel, it will be submitted
 
 The resulting image will contain several probably non-continuous borders throughout image. They will be formed around various elements of the image, especially the whale itself and small artifacts produced by shadows, edges, foams, dirt, and other interferences. The correction of flaws in the lines that make up the edges of the image elements are corrected through the morphological method of closing the threshold image.
 
-![](./doc/img/edge_detection2.png)
+<p align="center">
+<img src="./doc/img/edge_detection2.png">
+</p>
 
 _The dilation followed by erosion of the elements of the image causes gaps present between one point and another to be connected, allowing the filling of the formed figure._
 
@@ -130,7 +136,9 @@ Unlike the previous method, in this case, the image is segmented directly from t
 
 Thresholding benefits if we transform the pixel values from 8-bit integers to 32-bit decimals and then apply a fading filter like the average or Gaussian filter. This has the role of interpolation of the discrete pixel values, improving the performance of the threshold method algorithm.
 
-![](./doc/img/histogram.png)
+<p align="center">
+<img src="./doc/img/histogram.png">
+</p>
 
 _On the right, histogram of the original image. On the left, the histogram of the image after a Gaussian filter with a 3-pixel size kernel. Note how the shapes of Gaussian peaks are better distinguished after fading._
 
@@ -140,13 +148,17 @@ However, Otsu's method is incompatible with specific images whose histograms are
 
 This problem can be overcome by generalizing the Otsu method to more than one threshold, known as the Multilevel Otsu Method. Liu and Yu (2009) showed that the multilevel Otsu method is fully compatible with clustering methods, some of which are more efficient from a computational point of view. Therefore, instead of the Otsu method, the segmentation of the channel was done using a Gaussian mixture model. This is a probabilistic model, which assumes that the data distribution is formed by mixing a finite number of Gaussian distributions of unknown parameters. Since the histogram of the pixel values ​​of each main element of the image should follow approximately a normal distribution, the Gaussian mixture model seemed to be more appropriate than other clustering methods, such as the k-means method, for example, which assumes that the calculated sections have equivalent dimensions.
 
-![](./doc/img/gaussian_histo.png)
+<p align="center">
+<img src="./doc/img/gaussian_histo.png">
+</p>
 
 _Examples of how the histogram is decomposed in the two Gaussians (left) model, by the bimodal Otsu method, and four Gaussians (right), by the Gaussian mixture model. The threshold was estimated at 0.40 and 0.57, respectively._
 
 For the Gaussian mixture model, the Gaussian curves representing the two most intense pixel groups were taken as a reference. Due to whales excel in the channel to form lighter than all the other picture elements, the threshold is calculated as the highest point of intersection of these two groups (which may be approximated as the mean of the centroids of each of the groups). The difference in the two threshold modes can be seen in the figure below.
 
-![](./doc/img/bimodal_threshold.png)
+<p align="center">
+<img src="./doc/img/bimodal_threshold.png">
+</p>
 
 _Original image, threshold by the bimodal model and the multimodal model, respectively._
 
@@ -156,7 +168,9 @@ The multimodal model allows the calculation of a more precise threshold for sepa
 
 The idea of ​​this segmentation method was first proposed by Ren and Malik (2003) and popularized by Achanta et al. (2010) through the algorithm called SLIC ( Simple Linear Iterative Clustering ). This algorithm performs a super-segmentation of the image using the k-means model and using all the pixel values ​​of all channels in the Lab color space as a reference.
 
-![](./doc/img/slic.png)
+<p align="center">
+<img src="./doc/img/slic.png">
+</p>
 
 _Example of superpixels creation using the SLIC algorithm._
 
@@ -164,7 +178,9 @@ The most similar pixels are grouped in a "superpixel" and may or may not be conn
 
 After creating the superpixels, they are grouped into three larger groups using an agglomerative clustering algorithm. They perform a hierarchical clustering of the superpixels based on the Euclidean distance. This step is suggested by Pantofaru and Herbert (2005), whose work uses a superpixel algorithm called "mean-shift," predecessor of SLIC.
 
-![](./doc/img/slic_reduction.png)
+<p align="center">
+<img src="./doc/img/slic_reduction.png">
+</p>
 
 _ number of superpixels reduced by agglomerative clustering (left) and selection of the cluster most compatible with the illumination of the original image (right)_
 
@@ -176,7 +192,9 @@ This method is simpler than the previous methods but more robust in variant char
 
 Based on these two principles, the algorithm divides the image into four windows. It calculates the histogram of each of them in the HSV space since this is partially invariant to different lighting conditions but returns differentiable histograms between regions. Suppose one of them has a histogram statistically different from the histogram that generated these four windows (determined by the correlation coefficient between the values ​​of each band). In that case, this window is marked in a mask, and then it subdivides the window into four more windows and so on.
 
-![](./doc/img/exhaustive_search.png)
+<p align="center">
+<img src="./doc/img/exhaustive_search.png">
+</p>
 
 _Example of a recursive search for regions with different histograms compared to the entire image histogram._
 
@@ -200,13 +218,17 @@ The overlap may vary r between 0 and 1, where a value greater than 0.5 is deemed
 
 Although the superposition metric proposed in Pascal VOC seems sensible in the scope of this work, the comparison with algorithms from other works is still ambiguous, even if they use the same metric. One must consider the quantity and nature of the images in the test set and how "permissible" was the person who labeled in each photo the actual position of the object to be detected. In the case of the whales in this work, the actual locations were marked, taking into account all the humanly visible parts of the cetaceans, even the submerged portion almost indistinct with the naked eye. Other authors, however, could prefer the delimitation of the whales in the photos only in the part out of the water and of easy observation. Still, others might like to delimit the whale region by leaving a certain amount of slack within the rectangle. Therefore, the statistics in Table 2 are intended for intra-study comparison only.
 
-![](./doc/img/score.png)
+<p align="center">
+<img src="./doc/img/score.png">
+</p>
 
 The performance of Histogram Similarity was remarkable, taking into account the simplicity of the concept. The performance of the segmentation by superpixels was not as good as expected since many other works use it successfully. It is believed to be a matter of adjustments to the algorithm.
 
 The threshold and contour detection methods also showed excellent results, given the variety of light conditions in each image. According to the figure below, the choice of color space proved to have a direct relationship with the final performance of the algorithm, according to the figure below.
 
-![](./doc/img/score2.png)
+<p align="center">
+<img src="./doc/img/score2.png">
+</p>
 
 _Precision of each thresholding technique, made with the Otsu method and Gaussian mixing model in channels a, H, Rn and combinations of these._
 
@@ -220,7 +242,9 @@ The most outstanding work concerning remote counting of right whales was done by
 
 As the present work does not have a relationship of true negatives, because the test photos always contain at least one individual, the statistics could not be summarized by the F1 metric, as is usual in works with classifiers.
 
-![](./doc/img/score_reference.png)
+<p align="center">
+<img src="./doc/img/score_reference.png)">
+</p>
 
 _Precision values obtained by the algorithms of this study and the study by Fretwell et al. (2014). The bold lines represent the best performances of both._
 
