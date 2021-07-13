@@ -29,9 +29,7 @@ The general scheme of the project proposed in this work is shown in the flowchar
 
 ![](./doc/img/fluxogram.png)
 
-### 1) White balance
-
-### 2) Channel decomposition
+### 1) Channel decomposition
 
 The color space defined by channels R, G, and B is sensitive to variations in lighting and the presence of shadows and reflections in the photographed environment. However, the photos available for this work were taken under different conditions of climate, time of day, lighting, and angle of incidence of the sun. In addition to these natural factors, it is noted that the camera is probably not the same since some images have different resolutions between them.
 
@@ -43,7 +41,7 @@ During the tests, all models performed satisfactorily with the H and S channels 
 
 This phenomenon has been attributed to the hypothesis that once seawater is intensely bluish concerning the whale, these elements will appear differently in the H channel due to the difference in hue. In photos taken on sunny days, the water shows a considerably more intense coloring, producing more saturated pixels and higher values ​​than the whale's pixels in the S channel. The R channel does not always prove to be the best option for the segmentation of the image. However, in some instances, the water region is almost wholly blackened in this channel, as there are no red tones in the water. This same effect occurs in channel a of the Lab space since this space separates the red from the blue in channels a and b, respectively, with the advantage that variations in lighting remain isolated in channel L.
 
-### 3) Removal of reflections and shadows in the waves
+### 2) Removal of reflections and shadows in the waves
 
 Depending on the weather conditions and the time of day, the incident rays of the sun in the water ripples produce shadows and reflections that hinder the segmentation process, especially in the stage where the edges of the whale are tried to be found in the image (Figure 4 ).
 
@@ -63,7 +61,7 @@ _The Fourier transform of the image's S-channel does not immediately show clues 
 
 Thus, for the sake of simplicity, I decided to apply a medium filter to the selected channels before the execution of the segmentation processes, making sure that the mask used was larger than the size of the shadows and streaks that we would like to eliminate.
 
-### 4) Vignette correction
+### 3) Vignette correction
 
 Given the angle of incidence and nature of the photographic equipment used to acquire the images, there is a sharp shading close to the edges of the image in some of the photos. This shading is known as "vignette," easily seen especially in channel V (intensity) as a dark gradient. This phenomenon makes searching for a global threshold of image thresholding difficult since the histogram of intensity values ​​starts to bear an extra region formed by the shading pixels, as shown in the figure below.
 
@@ -88,7 +86,7 @@ _a) image severely affected by the vignette effect, b) original image after appl
 
 It is noticed that the correction is not precise, but it considerably reduces the effect caused by the vignette during the thresholding process. Consequently, the image's contrast is visibly flattened but could be quickly normalized a posteriori.
 
-### 5) Choosing the least troubled channel
+### 4) Choosing the least troubled channel
 
 As the threshold detection and contour detection algorithm uses only one channel as an input, I decided to create a method to choose the least troubled channel for the task automatically.
 
@@ -104,7 +102,7 @@ _Water vapor expelled by the whale's spiracle confuses the thresholding algorith
 
 Given this fact, I decided to simulate raw edge detection in each candidate channel (as mentioned above, channels with more remarkable invariance to the difference in illumination had higher priority) by calculating the image gradient. Once the edges are detected, choose the one where the sum of the pixels of the image is smaller. In practical terms, this means selecting the channel that has the least interference.
 
-### 6) Segmentation and Edge detection method
+### 5) Segmentation and Edge detection method
 
 After checking which channel is less troubled (among H, S and R normalized, for this method), the image gradient is calculated,  then subjected to binarization using the Otsu method, as shown in figure 10.
 
@@ -122,7 +120,7 @@ _The dilation followed by erosion of the elements of the image causes gaps prese
 
 After the correction of failures in the contours and making the solid lines, the filling s medium s becomes trivial. Regardless of the method used, the final result will be the same. In this work, the filling algorithm consists of invading the complementary form of the image through expansion. Holes are not connected to the edges and therefore are not overrun. The result is the complementary subset of the invaded region.
 
-### 7) Thresholding
+### 6) Thresholding
 
 Unlike the previous method, in this case, the image is segmented directly from the selected channel without going through the edge detection process. Based on the hypothesis that there are background and front elements separable in the image only by the value of the pixels, the method consists of finding the optimal threshold for the maximum separation to occur. I made tests with channel a of the Lab space and H of the HSV space, both with excellent invariant properties. The results showed that among them, channel a is the most appropriate for the separation of the whale from the bottom element.
 
@@ -150,7 +148,7 @@ _Original image, threshold by the bimodal model and the multimodal model, respec
 
 The multimodal model allows the calculation of a more precise threshold for separating the whale from the rest of the image. It is even noted that the threshold was such that the water vapor expelled by the whale was left out.
 
-### 8) Superpixel grouping method
+### 7) Superpixel grouping method
 
 The idea of ​​this segmentation method was first proposed by Ren and Malik (2003) and popularized by Achanta et al. (2010) through the algorithm called SLIC ( Simple Linear Iterative Clustering ). This algorithm performs a super-segmentation of the image using the k-means model and using all the pixel values ​​of all channels in the Lab color space as a reference.
 
@@ -168,7 +166,7 @@ _ number of superpixels reduced by agglomerative clustering (left) and selection
 
 After reducing the number of clusters, the most relevant cluster among the three estimated is selected. In the vast majority of the investigated photos, the whale's body has pixels of greater value in the R channel than in the other channels. Converting the RGB space to normalized RGB, to ensure that the selection method is standardized in different illuminations, the segment whose pixel ratio of the normalized R channel in relation to the rest of the image is the largest is selected (Figure 16 ).
 
-### 9) Method similarity of histograms
+### 8) Method similarity of histograms
 
 This method is simpler than the previous methods but more robust in variant characteristics between one image and the other. This algorithm is based on two facts from the nature of the photos in question: a) the whale occupies a small area of ​​the image, and b) most of the image, which is occupied by water, is practically uniform.
 
@@ -180,7 +178,7 @@ _Example of a recursive search for regions with different histograms compared to
 
 Thanks to the recursion of the algorithm, the scan becomes more efficient since the computation of the histograms focuses on the regions (and sub-regions) that have only pixels of interest instead of background pixels.
 
-### 10) Post-processing
+### 9) Post-processing
 
 For all the segmentation methods used, the next step is to eliminate small segments through the morphological opening operation (in which erosion is carried out, followed by the dilation of the image).
 
