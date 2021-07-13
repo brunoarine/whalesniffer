@@ -90,15 +90,15 @@ However, for this work, I chose a significantly more straightforward solution. U
 
 I noticed experimentally that this Gaussian filter produced a more subtle gradient due to the nature of the mask, in contrast to the square mask of the medium filter, which creates distinct bands in the image.
 
-Image correction takes place entirely on channel V, using the formula.
+Image correction takes place entirely on channel V, using the formula O = I - IxG + 128., where I is channel V, and G is the Gaussian convolution mask. An example of a result can be seen in the image below.
 
-<img src="https://latex.codecogs.com/gif.latex?O_t=O = I - I \dot G + 128" />
+<p align="center">
+<img src="./doc/img/vignette_threshold.png">
 
-where I is channel V, and G is the Gaussian convolution mask. An example of a result can be seen in the image below.
+<em>a) image severely affected by the vignette effect, b) original image after applying the Gaussian filter, c) subtraction.</em>
+</p>
 
-![](./doc/img/vignette_threshold.png)
 
-_a) image severely affected by the vignette effect, b) original image after applying the Gaussian filter, c) subtraction._
 
 It is noticed that the correction is not precise, but it considerably reduces the effect caused by the vignette during the thresholding process. Consequently, the image's contrast is visibly flattened but could be quickly normalized a posteriori.
 
