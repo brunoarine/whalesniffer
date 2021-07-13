@@ -2,13 +2,6 @@
 
 The North Atlantic Right Whale (_Eubalenae glacialis_) is currently represented by no more than 500 individuals globally. Thus, obtaining information about each individual's health and conditions is urgent so that preservation entities can protect them from extinction in the company of the scientific community. To track and monitor the population, experts photograph right whales by aerial survey and manually compared them with an online photo-identification catalog. The identification process takes time, making individual tracking for biological sampling, acoustic recording, and various relevant medical assessments difficult. Currently, only a few professionals can visually identify each whale present in the photos when they emerge. That sounds like an excellent job for machine learning! ;)
 
-## The 2015 Kaggle challenge
-
-The automatic tracking of whales of different species is nothing new. Non-visual methods are commonly used, which use statistical techniques and neural networks to identify a particular species of whales using acoustic spectra. Programs for visual approaches exist to monitor migratory movements of specific groups through thermal cameras. But we can do better and track them individually.
-For every machine learning model, regardless of the task for which it was designed, the degree of performance is directly related to the quantity and quality of the training material. The amount, of course, is given by the size of the population that makes up the material. Quality refers to the relevance of the parameters provided and the signal-to-noise ratio of the samples (represented by the number of false positives detected).
-
-The images used during the process of researching the most appropriate methods and the general elaboration of the algorithm were composed of a subset of 100 photographs made available by the Kaggle website (2015) together with the NOAA (National Oceanic and Atmospheric Administration), where more than 8 gigabytes of images are made available free of charge as a result of a proposed contest for the development of algorithms capable of individually identifying each specimen contained in the photos. All photos have been reduced to 800 pixels in height by 1000 pixels in width.
-
 ## A word on the training material
 
 For every machine learning model, regardless of the task for which it was designed, the degree of performance is directly related to the quantity and quality of the training material. The amount, of course, is given by the size of the population that makes up the material. Quality refers to the relevance of the parameters provided and the signal-to-noise ratio of the samples (represented by the number of false positives detected).
