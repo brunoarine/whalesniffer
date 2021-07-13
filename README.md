@@ -46,7 +46,7 @@ Depending on the weather conditions and the time of day, the incident rays of th
 <img src="./doc/img/channel_s.png">
 </p>
 
-It is clear that these unwanted artifacts in the image differ from the whale's body in size and frequency; while there is only one whale per photo occupying a large region of the image, the shadows and streaks are numerous and thin. One way to eliminate them would be through band filtering in the domain of the image frequencies, either by the Fourier transform or wavelet. An example of what such a process would look like is shown in the figure below.
+It is clear that these unwanted artifacts in the image differ from the whale's body in size and frequency; while there is only one whale per photo occupying a large region of the image, the shadows and streaks are numerous and thin. One way to eliminate them would be through band filtering in the image's frequency domain, either by the Fourier transform or wavelet. An example of what such a process would look like is shown in the figure below.
 
 <p align="center">
 <img src="./doc/img/simulation.png">
@@ -54,15 +54,13 @@ It is clear that these unwanted artifacts in the image differ from the whale's b
 
 _2D Fourier transform simulation on a) an image with geometric shapes and interference lines, b) interference lines only, and c) geometric shapes only._ 
 
-When applying the fast Fourier transform to a real photo and obtaining the power spectrum (squaring the real and imaginary part of the spectrum), the result is not intuitive enough for us to know which region of the spectrum to neutralize for that the desired interferences are eliminated (Figure 6 ).
+When applying the fast Fourier transform to a real photo and obtaining the power spectrum (squaring the real and imaginary part of the spectrum), the result is not intuitive enough for us to know which region of the spectrum to neutralize so that interferences could be eliminated.
 
 <p align="center">
 <img src="./doc/img/channel_s_fourier.png">
 
 <em>The Fourier transform of the image's S-channel does not immediately show clues as to how to eliminate ripples in the water.</em>
 </p>
-
-
 
 Thus, for the sake of simplicity, I decided to apply a medium filter to the selected channels before the execution of the segmentation processes, making sure that the mask used was larger than the size of the shadows and streaks that we would like to eliminate.
 
@@ -76,10 +74,9 @@ Given the angle of incidence and nature of the photographic equipment used to ac
 <em>Example of thresholding by Otsu method in an image with vignette.</em>
 </p>
 
+Typically, vignette correction is done by subtracting the pixel values ​​from the original image by the pixel values from a white background image obtained with the same photographic equipment and under the same lighting conditions. If reference images are not available, the process of correcting the vignette can become a tad more complex. One method, for example, involves using a mixture of Gaussian models to determine the nature of each pixel and obtain the separation between the vignette and the image itself (CHEN et al., 2013).
 
-Typically, vignette correction is done by subtracting the pixel values ​​from the original image by the pixel values from a white background image obtained with the same photographic equipment and under the same lighting conditions. If reference images are not available, the process of correcting the vignette, depending on the final objective, becomes much more complex. One method, for example, involves using a mixture of Gaussian models to determine the nature of each pixel and obtain the separation between the vignette and the image itself (CHEN et al., 2013).
-
-However, for this work, I chose a significantly more straightforward solution. Using channel V as a reference, the image was blurred through 2D convolution with a Gaussian mask. Immediately, it is noticed that the region where there is shading stands out from the rest of the image, which has lighter lighting.
+However, for this work, I chose a significantly more straightforward solution. Using channel V as a reference, the image was blurred through 2D convolution with a Gaussian mask. Immediately, it is noticed that the region where there is shading stands out from the rest of the image, which has a "lighter" lighting.
 
 I noticed experimentally that this Gaussian filter produced a more subtle gradient due to the nature of the mask, in contrast to the square mask of the medium filter, which creates distinct bands in the image.
 
@@ -90,8 +87,6 @@ Image correction takes place entirely on channel V, using the formula O = I - Ix
 
 <em>a) image severely affected by the vignette effect, b) original image after applying the Gaussian filter, c) subtraction.</em>
 </p>
-
-
 
 It is noticed that the correction is not precise, but it considerably reduces the effect caused by the vignette during the thresholding process. Consequently, the image's contrast is visibly flattened but could be quickly normalized a posteriori.
 
