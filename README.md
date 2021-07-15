@@ -6,15 +6,15 @@ The North Atlantic Right Whale (_Eubalenae glacialis_) is currently represented 
 
 In 2015, Kaggle and NOAA (National Oceanic and Atmospheric Administration) made available more than 8 gigabytes of images, free of charge, in a contest for the development of algorithms capable of individually identifying each whale specimen contained in the photos. The problem is that the images were not annotated.
 
-So this project is an attempt at tackling the first step of an image recognition pipeline, the annotation step. The algorithm in this project attempts to detect whales in aerial images.
+So this project is an attempt at tackling the first step of an image recognition pipeline: **segmentation**. The study was presented as a capstone project for the Digital Image Processing class in my Environmental Sciences master's degree at Universidade Estadual Paulista "Júlio de Mesquita Filho" (UNESP).
 
 ## Used tools
 
 The algorithms were written in Python 2.7.6 using the libraries Scikit-Image, OpenCV, and NumPy.
 
-## Pre-processing plan
+## Methodology
 
-The general scheme of the project proposed in this work is shown in the flowchart of Figure 3.
+The pre and post processing steps for this work are shown in the flowchart below:
 
 <p align="center">
 <img src="./doc/img/fluxogram.png">
