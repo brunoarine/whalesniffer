@@ -135,7 +135,7 @@ _The dilation followed by erosion of the elements of the image causes gaps prese
 
 After correcting the flaws in the contours and making them continuous lines, filling the shapes becomes trivial and, regardless of the method used, the final result will be the same. In the case of this work, the filling algorithm consists of invading the complementary shape of the image through the dilation process. Holes are not connected to edges and therefore are not invaded. The result is the complementary subset of the invaded region.
 
-### 5.2) Thresholding
+#### 5.2) Thresholding
 
 Unlike the previous method, in this case the image is segmented directly from the selected channel, without going through the edge detection process. Based on the hypothesis that there are background and front elements separable in the image only by the value of the pixels, the method consists in finding the optimal threshold for the maximum separation to occur. Tests were carried out with the a channel of the Lab space and the H channel of the HSV space, both with excellent invariant properties. The results showed that among them, channel a is the most suitable for separating the whale from the bottom element.
 
@@ -205,7 +205,7 @@ _Example of a recursive search for regions with different histograms compared to
 
 Thanks to the recursiveness of the algorithm, scanning becomes more efficient, as the computation of histograms focuses on regions (and sub-regions) that have only pixels of interest, rather than background pixels.
 
-### 9) Post-processing
+### 6) Post-processing
 
 For all the segmentation methods used, the next step is to eliminate small segments through the morphological opening operation (in which erosion is carried out, followed by the dilation of the image).
 
