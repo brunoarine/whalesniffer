@@ -1,23 +1,15 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Nov 21 16:03:18 2015
 
-@author: Deus
-"""
-import whalehunt.body
-import pylab
-import glob
-import cv2
-import numpy as np
-import matplotlib.pyplot as plt
-import whalehunt
-from whalehunt.utils import evaluate_score
-from sklearn.metrics import auc    
 import time
 import datetime
-import pickle
+import glob
+import cv2
 import pandas as pd
-from whalehunt.utils import pathutils
+import matplotlib.pyplot as plt
+import whalesniffer.body
+from whalesniffer.utils import pathutils
+from whalesniffer.utils import evaluate_score
+
 
 SHOW_THUMBS = True
 
@@ -27,11 +19,11 @@ def imhist(img, range=None):
 #directory = '/home/soldeace/Pictures/small/'
 directory = 'c:\\temp\\small\\'
 filelist = glob.glob(directory + 'w_23.png')
-dict_actual = whalehunt.load_annotations('data/thumbnails.json')
+dict_actual = whalesniffer.load_annotations('data/annotations.json')
 models = ( 
- (u'Clustering', whalehunt.body.Clustering()),
- (u'Bayesian', whalehunt.body.Bayesian()),
- (u'Manual', whalehunt.body.Manual())
+ (u'Clustering', whalesniffer.body.Clustering()),
+ (u'Bayesian', whalesniffer.body.Bayesian()),
+ (u'Manual', whalesniffer.body.Manual())
 
  )
 
@@ -76,7 +68,7 @@ for model_name, model in models:
 
 df_areas['Actual'] = y_actual
 
-#with open('data/run {}.txt'.format(datetime.datetime.now()), 'wb') as handle:
+#with open('reports/run {}.txt'.format(datetime.datetime.now()), 'wb') as handle:
 #    pickle.dump(statistics,handle)
 
 
@@ -122,8 +114,8 @@ for model, stats in statistics.iteritems():
     print u"{:<25} {:<25}".format(model, stats['total_time'])
     #np.sum(stats['pascal'] >= 0.5)/float(len(stats['pascal'])) )
     
-df_areas.to_csv('data\\df_areas.csv', encoding='utf-8')
-df_recall.to_csv('data\\df_recall.csv', encoding='utf-8')
-df_pascal.to_csv('data\\df_pascal.csv', encoding='utf-8')
-df_precision.to_csv('data\\df_precision.csv', encoding='utf-8')
-df_fpr.to_csv('data\\df_fpr.csv', encoding='utf-8')
+df_areas.to_csv('reports\\df_areas.csv', encoding='utf-8')
+df_recall.to_csv('reports\\df_recall.csv', encoding='utf-8')
+df_pascal.to_csv('reports\\df_pascal.csv', encoding='utf-8')
+df_precision.to_csv('reports\\df_precision.csv', encoding='utf-8')
+df_fpr.to_csv('reports\\df_fpr.csv', encoding='utf-8')

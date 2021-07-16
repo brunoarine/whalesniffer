@@ -50,8 +50,8 @@ def otsu1( hist, total ):
     """
     This is the original otsu thresholding algorithm. No optimization is applied, in order 
     to illustrate what the algorithm is trying to do
-    'hist' is the histogram of the image or data
-    'total' is the total number of pixels of the image, or the size of data
+    'hist' is the histogram of the image or reports
+    'total' is the total number of pixels of the image, or the size of reports
     """
     no_of_bins = len( hist ) # should be 256
 
