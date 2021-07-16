@@ -10,7 +10,7 @@ from skimage.color import rgb2hsv, rgb2lab
 from skimage.filters import rank
 from skimage.filters import sobel
 from skimage.feature import canny
-from skimage.filters import threshold_otsu, threshold_adaptive
+from skimage.filters.thresholding import threshold_otsu, threshold_local
 from scipy.signal import convolve2d
 import numpy as np
 import operator
@@ -139,6 +139,6 @@ class Prototype:
             
             
         
-            print filename
+            print(filename)
             rectangles.append(blob.bound_rect(img_cleaned))
         return rectangles

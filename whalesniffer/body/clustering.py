@@ -9,7 +9,7 @@ from pylab import imread
 import numpy as np
 from skimage.transform import resize
 from skimage.color import rgb2lab
-from skimage.filters import gaussian_filter
+from skimage.filters import gaussian
 from sklearn.cluster import KMeans
 import mahotas
 from scipy import ndimage as ndi
@@ -25,7 +25,7 @@ class Clustering:
             raise Exception('Input list of files is not a list actually')
         rectangles = []
         for filename in filenames_list:
-            img_orig = gaussian_filter(rgb2lab(imread(filename))[:,:,1], 3)
+            img_orig = gaussian(rgb2lab(imread(filename))[:,:,1], 3)
             h_orig, w_orig = img_orig.shape
             h_small, w_small = int(h_orig * scale), int(w_orig * scale)
             thumb = resize(img_orig, (h_small, w_small))

@@ -1,12 +1,7 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Nov 22 22:14:33 2015
-
-@author: Usuario
-"""
 
 from skimage.color import rgb2hsv, rgb2lab
-from skimage.filters import rank, threshold_otsu, gaussian_filter
+from skimage.filters import rank, threshold_otsu, gaussian
 import numpy as np
 from skimage.morphology import disk
 import mahotas

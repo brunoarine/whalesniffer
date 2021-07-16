@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Nov 22 22:48:27 2015
 
-@author: Usuario
-"""
-from skimage.filters import rank, sobel, gaussian_filter
+from skimage.filters import rank, sobel, gaussian
 from skimage.feature import canny
 import numpy as np
 import operator
@@ -20,7 +16,7 @@ def denoise(img, mode=rank.median):
 def least_noise(candidates):
     noises = []
     for idx, channel in enumerate(candidates):
-        channel_clean = gaussian_filter(channel, 16)
+        channel_clean = gaussian(channel, 16)
         noise_value = estimate_noise(channel_clean, mode='sobel')    
         noises.append((idx, noise_value))    
     img_ref = candidates[min(noises, key=operator.itemgetter(1))[0]]

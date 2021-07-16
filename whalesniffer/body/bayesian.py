@@ -9,7 +9,7 @@ from pylab import imread, imshow, figure, colorbar
 import numpy as np
 from skimage.transform import resize
 from skimage.color import rgb2lab
-from skimage.filters import gaussian_filter
+from skimage.filters import gaussian
 from skimage.filters import rank
 import mahotas
 from ..utils import blob
@@ -80,7 +80,7 @@ class Segment:
     def prob(self, x, i, num_cols):        
         u_priors = np.mean(self.priors_)
         s_priors = np.std(self.priors_)
-        print s_priors
+        print(s_priors)
         u_dist = 1
         s_dist = num_cols/25
         log_p_a = lognormpdf(x, u_priors, s_priors)
@@ -102,7 +102,7 @@ class Bayesian:
         
         rectangles = []
         for filename in filenames_list:
-            img_orig = gaussian_filter(rgb2lab(imread(filename))[:,:,1], 3)
+            img_orig = gaussian(rgb2lab(imread(filename))[:,:,1], 3)
             show(img_orig)
             h_orig, w_orig = img_orig.shape
             h_small, w_small = int(h_orig * self.scale), int(w_orig * self.scale)
@@ -131,13 +131,13 @@ class Bayesian:
             show(res.reshape(h_small,w_small))
             seg_means = [np.mean(seg.priors_) for seg in self.segments_]
             brightest_seg = np.argmax(seg_means)
-            print brightest_seg
-            print res.reshape(h_small, w_small)
+            print(brightest_seg)
+            print(res.reshape(h_small, w_small))
             mask = np.zeros(len(res)).astype('int')
             mask[res == brightest_seg] = 1           
             
             img_mask = mask.reshape(h_small, w_small)
-            print seg_means
+            print(seg_means)
             show(img_mask)
             img_closed = mahotas.close(img_mask, disk(h_orig/13))
             label_objects, nb_labels = ndi.label(img_closed)
@@ -150,4 +150,3 @@ class Bayesian:
             
             rectangles.append(blob.bound_rect(img_cleaned))
         return rectangles
-        

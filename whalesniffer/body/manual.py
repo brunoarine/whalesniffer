@@ -7,7 +7,7 @@ Created on Thu Nov 26 21:28:57 2015
 
 import numpy as np
 from skimage.color import rgb2lab
-from skimage.filters import gaussian_filter
+from skimage.filters import gaussian
 from skimage.morphology import disk
 from skimage.io import imread
 import mahotas
@@ -27,7 +27,7 @@ class Manual:
         rectangles = []
         for filename in filenames_list:
             img = imread(filename)
-            img_a = color.scaler(gaussian_filter(rgb2lab(img)[:,:,1], 3))            
+            img_a = color.scaler(gaussian(rgb2lab(img)[:,:,1], 3))
             h,w = img_a.shape
             mask = img_a > threshold
             img_closed = mahotas.close(mask, disk(h/15))        
