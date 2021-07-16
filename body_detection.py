@@ -2,7 +2,7 @@
 """
 Created on Sat Nov 21 16:03:18 2015
 
-@author: Deus
+@author: Bruno Arine
 """
 import whalehunt.body
 import pylab
