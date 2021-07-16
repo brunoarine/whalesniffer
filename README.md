@@ -1,10 +1,8 @@
 # Whalesniffer
 
-Whalesniffer locates whales in aerial images using different types of segmentation strategies. The study was presented as the capstone project for the Digital Image Processing classes at Universidade Estadual Paulista "Júlio de Mesquita Filho" (UNESP) in 2015 (Sorocaba, Brazil) and recently made Python 3-compatible. For more detailed information, please read my [project report](https://github.com/brunoarine/whalesniffer/tree/main/docs) (in Portuguese).
+Whalesniffer locates whales in aerial images using different types of segmentation strategies. The study was presented as the capstone project for the Digital Image Processing classes at Universidade Estadual Paulista "Júlio de Mesquita Filho" (UNESP) in 2015 (Sorocaba, Brazil) and recently made Python 3-compatible. For more information, please read my [project report](https://github.com/brunoarine/whalesniffer/tree/main/docs) (in Portuguese).
 
 ![](./reports/images/HistSimilarity-best-1.png)
-
-The data set provided in this repository is a downsampled version of [Kaggle's Right Whale Recognition challenge data set](https://www.kaggle.com/c/noaa-right-whale-recognition/data). The image files comprise only the first hundred image from the original set, and they were resized to 640x480 px to reduce disk usage and execution time. All images were annotated by hand.
 
 ## Prerequisites
 - matplotlib 3.4.2
@@ -37,13 +35,14 @@ Open the folder and type:
 ```shell
 python run.py
 ```
-The program will try different strategies and will output a table containing execution time and IoU stats for each
-strategy. Additional data will be stored in:
+The program will try different strategies and output a table containing execution time and IoU stats. It will also store additional data in:
 
-- `/reports/`: estimated whale rectangle for each image file, along with some performance metrics (in csv format).
+- `/reports/`: estimated whale rectangle for each image file, along with some performance metrics (in CSV format).
 - `/reports/images`: two of the best and worst cases for each segmentation strategy.
 
 ## Methodology
+
+The data set provided in this repository is a downsampled version of [Kaggle's Right Whale Recognition challenge data set](https://www.kaggle.com/c/noaa-right-whale-recognition/data). The image files comprise only the first hundred images from the original set, and they were resized to 640x480 px to reduce disk usage and execution time. All images were annotated by hand.
 
 The pre and post-processing steps for this work are shown in the flowchart below:
 
@@ -51,23 +50,23 @@ The pre and post-processing steps for this work are shown in the flowchart below
 <img src="./docs/img/fluxogram.png">
 </p>
 
-Four different ways of locating whales in the images were evaluated: contour search, thresholding, superpixel clustering, and histogram similarity search. The execution time of each algorithm was measured and taken into account in the final discussions.
+Four different ways of locating whales in the images were evaluated: edge detection, thresholding, superpixel clustering, and histogram similarity search. The execution time of each algorithm was measured and taken into account at the end of the document. 
 
 ### 1) Channel decomposition
 
-The color space defined by the R, G and B channels is sensitive to light variation, as well as the presence of shadows and reflections in the photographed environment. The photos available for this work, however, were taken under different conditions of weather, time of day, lighting and angle of incidence of the sun. In addition to these natural factors, it should be noted that the camera is probably not the same, as some images have different resolutions from each other.
+The color space defined by the R, G, and B channels is sensitive to light variation and the presence of shadows and reflections in the photographed environment. However, the photos available for this work were taken under different conditions of weather, time of day, lighting, and angle of incidence of the sun. In addition to these natural factors, it should be noted that the camera is probably not the same, as some images have different resolutions from each other.
 
-To ensure that there is a standard in the overall brightness and hue of the images, it was preferred to prioritize color spaces that are invariant to most of these factors. The table below lists the invariance quality of some of these color spaces.
+To ensure that there is a standard in the overall brightness and hue of the images, I preferred to prioritize color spaces invariant to most of these factors. The table below lists the invariance quality of some of these color spaces.
 
 <p align="center">
 <img src="./docs/img/variance.png">
 </p>
 
-_Invariance properties of individual channels in ascending order of invariance. The sign of "-" means fully variant, "+/-" partially invariant and "+" fully invariant to the corresponding property. _
+_Invariance properties of individual channels in ascending order of invariance. The sign of "-" means fully variant, "+/-" partially invariant, and "+" fully invariant to the corresponding property._
 
 During the tests, all models presented a satisfactory performance with the H and S channels of the HSV space, the a channel of the Lab space, and the Rn channel of the Normalized RGB space.
 
-These results were probably because sea water is intensely bluish in relation to the whale, so these elements will appear differently in the H channel due to the difference in hue. In photos taken on sunny days, the water exhibits a considerably more intense coloration, producing more saturated pixels and consequently higher values ​​than the whale pixels in the S channel. The R channel is not always the best choice for targeting of the image, however, in certain cases the water region is almost completely black in this channel, as there are no red tones in the water. This same effect occurs in channel a of the Lab space, since this space separates red from blue in channels a and b respectively, with the advantage that variations in lighting remain isolated in channel L.
+These results probably occurred because seawater is intensely more bluish than the whale, so that these elements will appear differently in the H channel due to the difference in hue. In photos taken on sunny days, the water exhibits a considerably more intense coloration, producing more saturated pixels and higher values than the whale pixels in the S channel. The R channel is not always the best choice for targeting the image. However, in some instances, the water region is almost entirely black in this channel, as there are no red tones in the water. This same effect occurs in channel a of the Lab space since this space separates red from blue in channels a and b, respectively, with the advantage that variations in lighting remain isolated in channel L.
 
 ### 2) Removal of reflections and shadows in the waves
 
@@ -77,7 +76,7 @@ Depending on weather conditions and time of day, the sun's incident rays on the 
 <img src="./docs/img/channel_s.png">
 </p>
 
-It is clear that these unwanted artifacts in the image differ from the whale's body in size and frequency; while there is only one whale per photo occupying a considerable region of the image, the shadows and streaks are numerous and thin. One way to eliminate them would be through band filtering in the image frequency domain, either by Fourier transform or wavelet. An example of what such a process would look like is shown in the figure below.
+It is clear that these unwanted artifacts in the image differ from the whale's body in size and frequency; while there is only one whale per photo occupying a large region of the image, the shadows and streaks are numerous and thin. One way to eliminate them would be through band filtering in the image frequency domain, either by Fourier transform or wavelet. An example of what such a process would look like is shown in the figure below.
 
 <p align="center">
 <img src="./docs/img/simulation.png">
@@ -85,7 +84,7 @@ It is clear that these unwanted artifacts in the image differ from the whale's b
 
 _2D Fourier transform simulation on a) an image with geometric shapes and interference lines, b) interference lines only, and c) geometric shapes only._
 
-When applying the fast Fourier transform to a real photo and obtaining the power spectrum (squaring the real and imaginary part of the spectrum), the result is not intuitive enough for us to know which region of the spectrum to neutralize so that interferences could be eliminated.
+When applying the fast Fourier transform to a real photo and obtaining the power spectrum (squaring the real and imaginary part of the spectrum), the result is not intuitive enough for us to know which region of the spectrum to neutralize so that we could eliminate interferences.
 
 <p align="center">
 <img src="./docs/img/channel_s_fourier.png">
@@ -98,7 +97,7 @@ Thus, for the sake of simplicity, I decided to apply a medium filter to the sele
 
 ### 3) Vignette correction
 
-Given the angle of incidence and nature of the photographic equipment used to acquire the images, there is a sharp shading close to the edges of the image in some of the photos. This shading is known as "vignette," easily seen especially in channel V (intensity) as a dark gradient. This phenomenon makes searching for a global threshold of image thresholding difficult since the histogram of intensity values ​​starts to bear an extra region formed by the shading pixels, as shown in the figure below.
+Given the angle of incidence and nature of the photographic equipment used to acquire the images, there is a sharp shading close to the edges of the image in some of the photos. This shading is known as "vignette," easily seen especially in channel V (intensity) as a dark gradient. This phenomenon makes searching for a global threshold of image thresholding difficult since the histogram of intensity values starts to bear an extra region formed by the shading pixels, as shown in the figure below.
 
 <p align="center">
 <img src="./docs/img/thresholding.png">
@@ -107,13 +106,13 @@ Given the angle of incidence and nature of the photographic equipment used to ac
 
 </p>
 
-Typically, vignette correction is done by subtracting the pixel values ​​from the original image by the pixel values from a white background image obtained with the same photographic equipment and under the same lighting conditions. If reference images are not available, the process of correcting the vignette can become a tad more complex. One method, for example, involves using a mixture of Gaussian models to determine the nature of each pixel and obtain the separation between the vignette and the image itself (CHEN et al., 2013).
+Typically, vignette correction is done by subtracting the pixel values of the original image from the pixel values of an image of a white background taken with the same photographic equipment and under the same lighting conditions. If reference images are not available, the vignette correction process, depending on the final objective, becomes vastly more complex. One of the methods, for example, involves using a mixture of Gaussian models to determine the nature of each pixel and obtain the separation between the vignette and the image itself (CHEN et al., 2013).
 
-However, for this work, I chose a significantly more straightforward solution. Using channel V as a reference, the image was blurred through 2D convolution with a Gaussian mask. Immediately, it is noticed that the region where there is shading stands out from the rest of the image, which has a "lighter" lighting.
+However, for this work, I chose a significantly more straightforward solution. Using channel V as a reference, the image was blurred through 2D convolution with a Gaussian mask. Immediately, it is noticed that the region where there is shading stands out from the rest of the image, which has "lighter" lighting.
 
 I noticed experimentally that this Gaussian filter produced a more subtle gradient due to the nature of the mask, in contrast to the square mask of the medium filter, which creates distinct bands in the image.
 
-Image correction takes place entirely on channel V, using the formula O = I - IxG + 128., where I is channel V, and G is the Gaussian convolution mask. An example of a result can be seen in the image below.
+Image correction takes place entirely on channel V, using the formula O = I - IxG + 128, where I is channel V, and G is the Gaussian convolution mask. An example of a result can be seen in the image below.
 
 <p align="center">
 <img src="./docs/img/vignette_threshold.png">
@@ -126,13 +125,13 @@ It is noticed that the correction is not precise, but it considerably reduces th
 
 ### 4) Choosing the least troubled channel
 
-As the threshold detection and contour detection algorithm uses only one channel as the input, I decided to create a method to choose the least troubled channel for the task automatically.
+Since the thresholding and edge detection algorithms use only one channel as input, I decided to create a method to choose the least disturbed channel for the task automatically.
 
-The definition of an image's disturbance is arbitrary and subject to different interpretations. What was desired, evaluating the different image channels, was to find the one in which the separation between foreground (whale) and background (water) elements was as less complex as possible.
+The definition of disturbance in an image is arbitrary and subject to different interpretations. By evaluating the various channels of the image, I intended to find one in which the separation between the foreground (whale) and background (water) elements was as less complex as possible.
 
-There is no consensus on which would be the most objective measure to translate the degree of disturbance of an image. A first attempt to do so was based on second-order statistics calculated from the co-occurrence matrix: photographed objects tend to have a pixel-by-pixel correlation that, by definition, is not present in white noise. However, white noise does not necessarily disrupt the image segmentation process; above all, it is trivially removed with the application of a medium filter, for example. Thus, the correlation as a measure of disturbance is not appropriate in this case.
+There is no consensus on the most objective measure that would translate the degree of disturbance in an image. A first attempt to do this was based on second-order statistics calculated from the co-occurrence matrix: photographed objects tend to have a pixel-to-pixel correlation that, by definition, is not present in white noise. However, white noise does not necessarily cause disturbance during the image segmentation process, especially since this is trivially removed with the application of a medium filter, for example. Thus, correlation as a measure of disturbance is not appropriate in this case.
 
-In the context of this work, I noticed that the whales in some images were sometimes in the middle of a large vortex of foam due to movement, sometimes partially submerged; in both cases, even without the presence of background noise in the image, the algorithm showed an unsatisfactory performance in the segmentation step.
+In the context of this work, I noticed that some whales were in the middle of a large vortex of foam due to movement, sometimes partially submerged; in both cases, even without the presence of background noise in the image, the algorithm showed an unsatisfactory performance in the segmentation step. 
 
 <p align="center">
 <img src="./docs/img/troubled_channel.png">
@@ -140,13 +139,13 @@ In the context of this work, I noticed that the whales in some images were somet
 
 _Water vapor expelled by the whale's spiracle confuses the thresholding algorithm._
 
-Given this fact, I decided to simulate a raw edge detection in each candidate channel (as mentioned above, channels with larger invariance to the difference in illumination had higher priority) by calculating the image gradient. Once the edges are detected, the algorithm chooses the channel where the sum of the pixels of the image is smaller. In practical terms, this means selecting the channel that has the least interference.
+Given this fact, I decided to simulate a raw edge detection in each candidate channel (as mentioned above, channels with more significant invariance to the difference in lighting had higher priority) by calculating the image gradient. Once the edges are detected, the one where the sum of image pixels is the smallest is chosen. In practical terms, this means selecting the channel that has the least interference. 
 
 ### 5) Segmentation methods
 
 #### 5.1) Edge detection method
 
-After checking which channel is less troubled (among H, S and normalized R), the image gradient is calculated, then subjected to binarization using the Otsu method, as shown in the figure below.
+After checking which channel is less troubled (among H, S, and normalized R), the image gradient is calculated, then subjected to binarization using the Otsu method, as shown in the figure below.
 
 <p align="center">
 <img src="./docs/img/edge_detection.png">
@@ -154,9 +153,9 @@ After checking which channel is less troubled (among H, S and normalized R), the
 
 _The most appropriate channel was selected, in this example being the H channel. Then it is filtered, its gradient is calculated, and then thresholded._
 
-If the reference image chosen was the normalized R channel, it will be submitted to a different edge detection process. This is because the r channel is naturally more complex than the H or S channel when these are suitable for whale segmentation, that is, when they show precisely the animal's silhouette and nothing else. The same does not occur with the r channel, however more stable it is compared to either H or S. Therefore, the r channel is treated again with a median filter for secondary removal of smaller elements and then subjected to Canny edge detection filter. The Canny filter is currently seen as one of the most efficient algorithms for the task.
+If the reference image chosen was the normalized R channel, it will be submitted to a different edge detection process. This is because the r channel is naturally more complex than the H or S channel when these are suitable for whale segmentation, that is, when they show precisely the animal's silhouette and nothing else. The same does not occur with the r channel, however more stable than either H or S. Therefore, the r channel is treated again with a median filter for secondary removal of smaller elements and then subjected to a Canny edge detection filter. The Canny filter is currently seen as one of the most efficient algorithms for the task.
 
-The resulting image will contain several probably non-continuous borders throughout image. They will be formed around various elements of the image, especially the whale itself and small artifacts produced by shadows, edges, foams, dirt, and other interferences. The correction of flaws in the lines that make up the edges of the image elements are corrected through the morphological method of closing the threshold image.
+The resulting image will contain several probably non-continuous borders throughout image. They will be formed around various image elements, especially the whale itself and small artifacts produced by shadows, edges, foams, dirt, and other interferences. The correction of flaws in the lines that make up the edges of the image elements are corrected through the morphological method of closing the threshold image.
 
 <p align="center">
 <img src="./docs/img/edge_detection2.png">
@@ -164,13 +163,13 @@ The resulting image will contain several probably non-continuous borders through
 
 _The dilation followed by erosion of the elements of the image causes gaps present between one point and another to be connected, allowing the filling of the formed figure._
 
-After correcting the flaws in the contours and making them continuous lines, filling the shapes becomes trivial and, regardless of the method used, the final result will be the same. In the case of this work, the filling algorithm consists of invading the complementary shape of the image through the dilation process. Holes are not connected to edges and therefore are not invaded. The result is the complementary subset of the invaded region.
+After correcting the flaws in the contours and making them continuous lines, filling the shapes becomes trivial and, regardless of the method used, the final result will be the same. In this work, the filling algorithm consists of invading the complementary shape of the image through the dilation process. Holes are not connected to edges and therefore are not overrun. The result is the complementary subset of the invaded region.
 
 #### 5.2) Thresholding
 
-Unlike the previous method, in this case the image is segmented directly from the selected channel, without going through the edge detection process. Based on the hypothesis that there are background and front elements separable in the image only by the value of the pixels, the method consists in finding the optimal threshold for the maximum separation to occur. Tests were carried out with the a channel of the Lab space and the H channel of the HSV space, both with excellent invariant properties. The results showed that among them, channel a is the most suitable for separating the whale from the bottom element.
+Unlike the previous method, in this case, the image is segmented directly from the selected channel without going through the edge detection process. Based on the hypothesis that there are background and front elements separable in the image only by the value of the pixels, the method consists of finding the optimal threshold for the maximum separation to occur. Tests were carried out with the a channel of the Lab space and the H channel of the HSV space, both with excellent invariant properties. The results showed that channel a is the most suitable for separating the whale from the bottom element.
 
-Thresholding benefits if we transform pixel values from 8-bit integers to 32-bit decimals, and then apply a fading filter such as the mean or Gaussian filter. This has the role of interpolating the discrete values of pixels, improving the performance of the thresholding method algorithm.
+Thresholding benefits if we transform pixel values from 8-bit integers to 32-bit decimals and then apply a fading filter such as the mean of the Gaussian filter. This has the role of interpolating the discrete values of pixels, improving the performance of the thresholding method algorithm.
 
 <p align="center">
 <img src="./docs/img/histogram.png">
@@ -180,7 +179,7 @@ _On the right, histogram of the original image. On the left, the histogram of th
 
 The Otsu method for calculating the threshold, as mentioned, assumes that the image contains two classes of pixels, whose histogram takes the form of a bimodal distribution. The algorithm performs an exhaustive search so that the intraclass variance is minimized, that is, the weighted sum of the variances of the two classes (OTSU, 1979).
 
-However, Otsu's method is incompatible with certain images whose histograms are multimodal distributions. That happens because of the presence of four distinct elements in the image: the water, the whale, the shadows, and the reflections that could not be removed in the pre-processing, either because the pixel values ​​are very close to those of the whale, either because the size of the impurities in the photo is larger than the mask used to filter them.
+However, Otsu's method is incompatible with specific images whose histograms are multimodal distributions. That happens because of the presence of four distinct elements in the image: the water, the whale, the shadows, and the reflections that could not be removed in the pre-processing, either because the pixel values ​​are very close to those of the whale, either because the size of the impurities in the photo is larger than the mask used to filter them.
 
 This problem can be overcome by generalizing the Otsu method to more than one threshold, known as the Multilevel Otsu Method. Liu and Yu (2009) showed that the multilevel Otsu method is fully compatible with clustering methods, some of which are more efficient from a computational point of view. Therefore, instead of the Otsu method, the segmentation of the channel was done using a Gaussian mixture model. This is a probabilistic model, which assumes that the data distribution is formed by mixing a finite number of Gaussian distributions of unknown parameters. Since the histogram of the pixel values ​​of each main element of the image should follow approximately a normal distribution, the Gaussian mixture model seemed to be more appropriate than other clustering methods, such as the k-means method, for example, which assumes that the calculated sections have equivalent dimensions.
 
@@ -198,7 +197,7 @@ For the Gaussian mixture model, the Gaussian curves representing the two most in
 
 _Original image, threshold by the bimodal model and the multimodal model, respectively._
 
-The multimodal model allows the calculation of a more precise threshold for separating the whale from the rest of the image. It is even noted that the threshold was such that the water vapor expelled by the whale was left out.
+The multimodal model allows calculating a more precise threshold for separating the whale from the rest of the image. It is even noted that the threshold was such that the water vapor expelled by the whale was left out.
 
 #### 5.3) Superpixel grouping method
 
@@ -210,7 +209,7 @@ The idea of ​​this segmentation method was first proposed by Ren and Malik (
 
 _Example of superpixels creation using the SLIC algorithm._
 
-The most similar pixels are grouped in a "superpixel" and may or may not be connected, according to the parameters imposed on the algorithm. Because it uses k-averages, this superpixel creation algorithm is the most computationally efficient (ACHANTA et al., 2012). However, even so, the execution time was too high to apply this segmentation method in 100 test images. Reducing the image to 20% of the original size has reduced the runtime without significantly impairing efficiency.
+The most similar pixels are grouped in a "superpixel" and may or may not be connected, according to the parameters imposed on the algorithm. Because it uses k-averages, this superpixel creation algorithm is the most computationally efficient (ACHANTA et al., 2012). However, the execution time was too high to apply this segmentation method in 100 test images. Reducing the image to 20% of the original size has reduced the runtime without significantly impairing efficiency.
 
 After creating the superpixels, they are grouped into three larger groups using an agglomerative clustering algorithm. They perform a hierarchical clustering of the superpixels based on the Euclidean distance. This step is suggested by Pantofaru and Herbert (2005), whose work uses a superpixel algorithm called "mean-shift," predecessor of SLIC.
 
@@ -224,9 +223,9 @@ After reducing the number of clusters, the most relevant cluster among the three
 
 #### 5.4) Histogram similarity
 
-This method is simpler than the previous methods, but more robust in relation to features that vary from one image to another. This algorithm is based on two facts from the nature of the photos in question: a) the whale occupies a small area of the image and b) most of the image, which is occupied by water, is practically uniform.
+This method is simpler than the previous methods but more robust about features that vary from one image to another. This algorithm is based on two facts from the nature of the photos in question: a) the whale occupies a small area of the image, and b) most of the image, which is occupied by water, is practically uniform.
 
-Based on these two principles, the algorithm divides the image into four windows and calculates the histogram of each one in the HSV space, since this is partially invariant to different lighting conditions, but returns differentiable histograms between regions. If one of them has a histogram statistically different from the histogram that generated these 4 windows (determined by the correlation coefficient between the values of each band), this window is marked in a mask and then it subdivides the window into 4 more windows and so on.
+Based on these two principles, the algorithm divides the image into four windows and calculates the histogram of each one in the HSV space since this is partially invariant to different lighting conditions but returns differentiable histograms between regions. Suppose one of them has a histogram statistically different from the histogram that generated these four windows (determined by the correlation coefficient between the values of each band). In that case, this window is marked in a mask, and then it subdivides the window into four more windows and so on.
 
 <p align="center">
 <img src="./docs/img/exhaustive_search.png">
@@ -234,13 +233,13 @@ Based on these two principles, the algorithm divides the image into four windows
 
 _Example of a recursive search for regions with different histograms compared to the entire image histogram._
 
-Thanks to the recursiveness of the algorithm, scanning becomes more efficient, as the computation of histograms focuses on regions (and sub-regions) that have only pixels of interest, rather than background pixels.
+Thanks to the recursiveness of the algorithm, scanning becomes more efficient, as the computation of histograms focuses on regions (and sub-regions) that have only pixels of interest rather than background pixels.
 
 ### 6) Post-processing
 
 For all the segmentation methods used, the next step is to eliminate small segments through the morphological opening operation (in which erosion is carried out, followed by the dilation of the image).
 
-More than one segment can remain in the resulting image in this step. Assuming that the whale is the largest front element in all photos, filter it so that only the largest segment remains. The detection and calculation of each spot present in the image is done through growing regions. In this process, the binary image is scanned until a pixel of the desired value is found (in this case, 1). From this point on, the image is scanned bilaterally to estimate how far this segment and value 1 propagates. After scanning the entire continuous range of values ​​one and locating the extent of the stain, it has the area counted and its pixels removed from the image. The algorithm then continues its search from the previous point.
+More than one segment can remain in the resulting image in this step. Assuming that the whale is the largest front element in all photos, filter it so that only the largest segment remains. The detection and calculation of each spot present in the image is done through growing regions. In this process, the binary image is scanned until a pixel of the desired value is found (in this case, 1). From this point on, the image is scanned bilaterally to estimate how far this segment and value 1 propagates. After scanning the entire continuous range of values ​​and locating the extent of the stain, it has the area counted and its pixels removed from the image. The algorithm then continues its search from the previous point.
 
 ## Results and discussion
 
@@ -316,7 +315,7 @@ FRETWELL, P. T.; STANILAND, I. J.; FORCADA, J. Whales from Space: Counting South
 
 FUJIWARA, M.; CASWELL, H. Demography of the endangered North Atlantic right whale. Nature, v. 414, n. 6863, p. 537–541, 2001.
 
-GILLESPIE, D. Detection and classification of right whale calls using an “edge” detector operating on a smoothed spectrogram. Canadian Acoustics, v. 32, n. 2, p. 39–47, 1 jun. 2004.
+GILLESPIE, D. Detection and classification of right whale calls using an "edge" detector operating on a smoothed spectrogram. Canadian Acoustics, v. 32, n. 2, p. 39–47, 1 jun. 2004.
 
 KAGGLE. Description - Right Whale Recognition | Kaggle. Disponível em: <https://www.kaggle.com/c/noaa-right-whale-recognition>. Acesso em: 17 nov. 2015.
 KRAUS, S. D.; BROWN, M. W.; CASWELL, H.; CLARK, C. W.; FUJIWARA, M.; HAMILTON, P. K.; KENNEY, R. D.; KNOWLTON, A. R.; LANDRY, S.; MAYO, C. A. North Atlantic right whales in crisis. SCIENCE-NEW YORK THEN WASHINGTON-, v. 5734, p. 561, 2005.
@@ -325,15 +324,15 @@ KRAUS, S. D.; MOORE, K. E.; PRICE, C. A.; CRONE, M. J.; WATKINS, W. A.; WINN, H.
 
 LAIST, D. W.; KNOWLTON, A. R.; PENDLETON, D. Effectiveness of mandatory vessel speed limits for protecting North Atlantic right whales. Endangered Species Research, v. 23, p. 133–147, 2014.
 
-LIU, D.; YU, J. Otsu Method and K-means. In: Ninth International Conference on Hybrid Intelligent Systems, 2009. HIS ’09, Anais... In: NINTH INTERNATIONAL CONFERENCE ON HYBRID INTELLIGENT SYSTEMS, 2009. HIS ’09. ago. 2009.
+LIU, D.; YU, J. Otsu Method and K-means. In: Ninth International Conference on Hybrid Intelligent Systems, 2009. HIS '09, Anais... In: NINTH INTERNATIONAL CONFERENCE ON HYBRID INTELLIGENT SYSTEMS, 2009. HIS '09. ago. 2009.
 
-MACDONALD, D. (ed.). The encyclopedia of mammals. 2 edition ed. Oxford ; New York: OUP Oxford, 2009.
+MACDONALD, D. (ed.). The encyclopedia of mammals. 2 edition ed. Oxford ; New York: OUP Oxford, 2009.
 
 MATE, B. R.; NIEUKIRK, S. L.; KRAUS, S. D. Satellite-Monitored Movements of the Northern Right Whale. The Journal of Wildlife Management, v. 61, n. 4, p. 1393–1405, 1997.
 
 NEW ENGLAND AQUARIUM. Right Whale Callosity Pattern Identification. Disponível em: <http://www.neaq.org/conservation_and_research/projects/endangered_species_habitats/right_whale_research/right_whale_projects/monitoring_individuals_and_family_trees/identifying_with_photographs/how_it_works/callosity_patterns.php>. Acesso em: 17 nov. 2015.
 
-NOAA. Automatic Whale Detector, Version 1.0 :: NOAA Fisheries. Disponível em: <http://www.fisheries.noaa.gov/stories/2015/02/gray_whale_survey_thermal_imaging.html>. Acesso em: 17 nov. 2015.
+NOAA. Automatic Whale Detector, Version 1.0 :: NOAA Fisheries. Disponível em: <http://www.fisheries.noaa.gov/stories/2015/02/gray_whale_survey_thermal_imaging.html>. Acesso em: 17 nov. 2015.
 
 OLIPHANT, T. E. Python for scientific computing. Computing in Science & Engineering, v. 9, n. 3, p. 10–20, 2007.
 
