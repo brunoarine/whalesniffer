@@ -1,0 +1,1289 @@
+[
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 270.0,
+                "width": 415.0,
+                "x": 224.0,
+                "y": 137.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_0.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 143.0,
+                "width": 319.0,
+                "x": 276.0,
+                "y": 174.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_1.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 148.0,
+                "width": 342.0,
+                "x": 167.0,
+                "y": 199.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_2.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 222.0,
+                "width": 220.0,
+                "x": 196.0,
+                "y": 43.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_3.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 268.0,
+                "width": 99.0,
+                "x": 266.0,
+                "y": 127.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_4.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 200.0,
+                "width": 200.0,
+                "x": 150.0,
+                "y": 1.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_5.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 131.0,
+                "width": 355.0,
+                "x": 1.0,
+                "y": 109.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_6.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 157.0,
+                "width": 203.0,
+                "x": 166.0,
+                "y": 89.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_7.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 220.0,
+                "width": 311.0,
+                "x": 328.0,
+                "y": 206.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_8.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 179.0,
+                "width": 154.0,
+                "x": 226.0,
+                "y": 246.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_9.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 108.0,
+                "width": 227.0,
+                "x": 1.0,
+                "y": 227.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_10.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 286.0,
+                "width": 76.0,
+                "x": 314.0,
+                "y": 1.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_11.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 112.0,
+                "width": 230.0,
+                "x": 295.0,
+                "y": 162.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_12.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 145.0,
+                "width": 340.0,
+                "x": 46.0,
+                "y": 181.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_13.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 134.0,
+                "width": 214.0,
+                "x": 256.0,
+                "y": 213.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_14.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 279.0,
+                "width": 298.0,
+                "x": 214.0,
+                "y": 121.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_15.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 248.0,
+                "width": 121.0,
+                "x": 166.0,
+                "y": 179.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_16.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 163.0,
+                "width": 77.0,
+                "x": 275.0,
+                "y": 133.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_17.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 250.0,
+                "width": 146.0,
+                "x": 269.0,
+                "y": 180.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_18.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 183.0,
+                "width": 342.0,
+                "x": 254.0,
+                "y": 95.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_19.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 309.0,
+                "width": 146.0,
+                "x": 169.0,
+                "y": -1.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_20.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 163.0,
+                "width": 288.0,
+                "x": 20.0,
+                "y": 113.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_21.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 129.0,
+                "width": 196.0,
+                "x": 134.0,
+                "y": 131.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_22.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 157.0,
+                "width": 280.0,
+                "x": 84.0,
+                "y": 236.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_23.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 155.0,
+                "width": 290.0,
+                "x": 137.0,
+                "y": 181.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_24.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 137.0,
+                "width": 368.0,
+                "x": 0.0,
+                "y": 123.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_25.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 234.0,
+                "width": 155.0,
+                "x": 228.0,
+                "y": 19.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_26.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 132.0,
+                "width": 362.0,
+                "x": 0.0,
+                "y": 106.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_27.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 80.0,
+                "width": 309.0,
+                "x": 244.0,
+                "y": 163.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_28.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 257.0,
+                "width": 165.0,
+                "x": 188.0,
+                "y": 169.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_29.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 219.0,
+                "width": 169.0,
+                "x": 126.0,
+                "y": 32.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_30.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 188.0,
+                "width": 140.0,
+                "x": 248.0,
+                "y": 83.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_31.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 84.0,
+                "width": 285.0,
+                "x": 279.0,
+                "y": 66.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_32.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 71.0,
+                "width": 325.0,
+                "x": 218.0,
+                "y": 195.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_33.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 111.0,
+                "width": 333.0,
+                "x": 301.0,
+                "y": 141.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_34.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 286.0,
+                "width": 144.0,
+                "x": 212.0,
+                "y": 140.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_35.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 243.0,
+                "width": 276.0,
+                "x": 8.0,
+                "y": 182.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_36.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 262.0,
+                "width": 279.0,
+                "x": 117.0,
+                "y": 2.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_37.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 126.0,
+                "width": 97.0,
+                "x": 294.0,
+                "y": 216.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_38.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 78.0,
+                "width": 142.0,
+                "x": 243.0,
+                "y": 94.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_39.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 91.0,
+                "width": 263.0,
+                "x": 53.0,
+                "y": 164.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_40.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 177.0,
+                "width": 125.0,
+                "x": 242.0,
+                "y": 112.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_41.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 248.0,
+                "width": 120.0,
+                "x": 309.0,
+                "y": 177.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_42.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 176.0,
+                "width": 292.0,
+                "x": 257.0,
+                "y": 70.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_43.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 209.0,
+                "width": 293.0,
+                "x": 71.0,
+                "y": 67.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_44.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 193.0,
+                "width": 59.0,
+                "x": 336.0,
+                "y": 0.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_45.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 70.0,
+                "width": 400.0,
+                "x": 113.0,
+                "y": 138.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_46.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 178.0,
+                "width": 99.0,
+                "x": 253.0,
+                "y": 91.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_47.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 308.0,
+                "width": 153.0,
+                "x": 171.0,
+                "y": 117.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_48.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 266.0,
+                "width": 382.0,
+                "x": 0.0,
+                "y": 19.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_49.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 210.0,
+                "width": 120.0,
+                "x": 268.0,
+                "y": 1.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_50.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 175.0,
+                "width": 257.0,
+                "x": 270.0,
+                "y": 252.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_51.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 67.0,
+                "width": 364.0,
+                "x": 12.0,
+                "y": 235.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_52.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 216.0,
+                "width": 268.0,
+                "x": 128.0,
+                "y": 174.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_53.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 137.0,
+                "width": 72.0,
+                "x": 373.0,
+                "y": 49.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_54.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 178.0,
+                "width": 305.0,
+                "x": 0.0,
+                "y": 58.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_55.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 220.0,
+                "width": 321.0,
+                "x": 233.0,
+                "y": 204.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_56.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 154.0,
+                "width": 366.0,
+                "x": 192.0,
+                "y": 122.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_57.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 362.0,
+                "width": 279.0,
+                "x": 218.0,
+                "y": 63.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_58.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 208.0,
+                "width": 328.0,
+                "x": 160.0,
+                "y": 127.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_59.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 218.0,
+                "width": 126.0,
+                "x": 153.0,
+                "y": 92.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_60.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 111.0,
+                "width": 318.0,
+                "x": 175.0,
+                "y": 259.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_61.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 261.0,
+                "width": 198.0,
+                "x": 105.0,
+                "y": 165.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_62.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 97.0,
+                "width": 275.0,
+                "x": 213.0,
+                "y": 248.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_63.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 228.0,
+                "width": 359.0,
+                "x": 273.0,
+                "y": 156.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_64.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 173.0,
+                "width": 443.0,
+                "x": 74.0,
+                "y": 221.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_65.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 246.0,
+                "width": 418.0,
+                "x": 190.0,
+                "y": 7.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_66.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 85.0,
+                "width": 207.0,
+                "x": 276.0,
+                "y": 162.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_67.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 80.0,
+                "width": 377.0,
+                "x": 40.0,
+                "y": 141.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_68.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 201.0,
+                "width": 115.0,
+                "x": 274.0,
+                "y": -2.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_69.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 195.0,
+                "width": 83.0,
+                "x": 328.0,
+                "y": 121.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_70.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 287.0,
+                "width": 249.0,
+                "x": 266.0,
+                "y": 139.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_71.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 124.0,
+                "width": 343.0,
+                "x": 29.0,
+                "y": 221.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_72.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 270.0,
+                "width": 88.0,
+                "x": 212.0,
+                "y": 156.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_73.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 246.0,
+                "width": 209.0,
+                "x": 303.0,
+                "y": 1.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_74.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 87.0,
+                "width": 179.0,
+                "x": 276.0,
+                "y": 139.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_75.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 276.0,
+                "width": 357.0,
+                "x": 195.0,
+                "y": 143.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_76.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 229.0,
+                "width": 162.0,
+                "x": 167.0,
+                "y": 72.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_77.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 62.0,
+                "width": 191.0,
+                "x": 270.0,
+                "y": 216.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_78.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 110.0,
+                "width": 70.0,
+                "x": 266.0,
+                "y": 120.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_79.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 217.0,
+                "width": 322.0,
+                "x": 127.0,
+                "y": 19.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_80.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 242.0,
+                "width": 217.0,
+                "x": 284.0,
+                "y": 183.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_81.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 110.0,
+                "width": 344.0,
+                "x": 268.0,
+                "y": 224.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_82.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 169.0,
+                "width": 90.0,
+                "x": 259.0,
+                "y": 35.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_83.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 83.0,
+                "width": 253.0,
+                "x": 131.0,
+                "y": 147.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_84.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 65.0,
+                "width": 273.0,
+                "x": 137.0,
+                "y": 214.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_85.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 85.0,
+                "width": 286.0,
+                "x": 331.0,
+                "y": 172.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_86.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 175.0,
+                "width": 365.0,
+                "x": 0.0,
+                "y": 165.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_87.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 226.0,
+                "width": 123.0,
+                "x": 240.0,
+                "y": 99.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_88.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 96.0,
+                "width": 351.0,
+                "x": 0.0,
+                "y": 75.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_89.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 179.0,
+                "width": 215.0,
+                "x": 41.0,
+                "y": 117.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_90.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 201.0,
+                "width": 75.0,
+                "x": 243.0,
+                "y": 0.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_91.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 203.0,
+                "width": 157.0,
+                "x": 254.0,
+                "y": 69.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_92.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 197.0,
+                "width": 291.0,
+                "x": 148.0,
+                "y": 125.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_93.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 213.0,
+                "width": 152.0,
+                "x": 289.0,
+                "y": 65.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_94.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 181.0,
+                "width": 84.0,
+                "x": 240.0,
+                "y": 95.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_95.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 235.0,
+                "width": 254.0,
+                "x": 92.0,
+                "y": 176.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_96.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 149.0,
+                "width": 233.0,
+                "x": 271.0,
+                "y": 176.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_97.jpg"
+    },
+    {
+        "annotations": [
+            {
+                "class": "rect",
+                "height": 210.0,
+                "width": 214.0,
+                "x": 170.0,
+                "y": 85.0
+            }
+        ],
+        "class": "image",
+        "filename": "/data/images/raw/w_98.jpg"
+    }
+]
