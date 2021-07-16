@@ -1,6 +1,6 @@
 # Whalesniffer
 
-Whalesniffer locates whales in aerial images using different types of segmentation strategies. The study was presented as the capstone project for the Digital Image Processing classes at Universidade Estadual Paulista "Júlio de Mesquita Filho" (UNESP), Sorocaba, Brazil. For more detailed information, please read my [project report](https://github.com/brunoarine/whalesniffer/tree/main/docs) (in Portuguese).
+Whalesniffer locates whales in aerial images using different types of segmentation strategies. The study was presented as the capstone project for the Digital Image Processing classes at Universidade Estadual Paulista "Júlio de Mesquita Filho" (UNESP) in 2015 (Sorocaba, Brazil) and recently made Python 3-compatible. For more detailed information, please read my [project report](https://github.com/brunoarine/whalesniffer/tree/main/docs) (in Portuguese).
 
 ![](./reports/images/HistSimilarity-best-1.png)
 
