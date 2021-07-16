@@ -12,14 +12,20 @@ from whalesniffer.utils import pathutils
 from whalesniffer.utils import evaluate_score
 
 SAVE_FIGURES = True
-IMG_DIR = 'data/images/raw/'
-REPORT_DIR = 'reports/images/'
+DATA_DIR = 'data/images/raw/'
+REPORT_IMG_DIR = 'reports/images/'
+AREAS_FILENAME = "reports/areas.csv"
+IOU_FILENAME = "reports/iou_score.csv"
+PRECISION_FILENAME = "reports/precision_score.csv"
+RECALL_FILENAME = "reports/recall_score.csv"
+FPR_FILENAME = "reports/fpr_score.csv"
 
-def imhist(img, range=None):
-    """Plot image histogram using 256 bins.
-    """
-    plt.hist(img.flatten(), 256, color='black', range=range)
 
+# def imhist(img, range=None):
+#     """Plot image histogram using 256 bins.
+#     """
+#     plt.hist(img.flatten(), 256, color='black', range=range)
+#
 
 def save_result_img(image_names, label):
     """Plot selected cases.
@@ -31,7 +37,7 @@ def save_result_img(image_names, label):
         a1 = tuple(df_areas.loc[image_name, "Actual"][1][::-1])
 
         fig, ax = plt.subplots()
-        img = plt.imread(IMG_DIR + image_name)
+        img = plt.imread(DATA_DIR + image_name)
         cv2.rectangle(img, p0, p1, (0, 255, 0), 2)
         cv2.rectangle(img, a0, a1, (0, 0, 255), 2)
 
@@ -44,12 +50,12 @@ def save_result_img(image_names, label):
                   .format(model, df_iou.loc[image_name, model], df_recall.loc[image_name, model]))
         plt.imshow(img)
         plt.tight_layout()
-        plt.savefig(f'{REPORT_DIR}{label}_{filenum}.png')
+        plt.savefig(f'{REPORT_IMG_DIR}{label}_{filenum}.png')
 
 # Load list of test image_names
 ground_truth = whalesniffer.load_annotations('data/annotations.json')
 
-filelist = glob.glob(IMG_DIR + "*.*")
+filelist = glob.glob(DATA_DIR + "*.*")
 y_actual = [ground_truth[pathutils.strip_path(x)] for x in filelist]
 
 models = (
@@ -100,9 +106,19 @@ print(datetime.datetime.now())
 print(u"{:<25} {:<25}".format('Model', 'Execution time'))
 for model, stats in iter(statistics.items()):
     print(u"{:<25} {:<25}".format(model, stats['total_time']))
+print("")
 
-df_areas.to_csv('reports/df_areas.csv', encoding='utf-8')
-df_recall.to_csv('reports/df_recall.csv', encoding='utf-8')
-df_iou.to_csv('reports/df_iou.csv', encoding='utf-8')
-df_precision.to_csv('reports/df_precision.csv', encoding='utf-8')
-df_fpr.to_csv('reports/df_fpr.csv', encoding='utf-8')
+print(f"Saving rectangles in {AREAS_FILENAME}")
+df_areas.to_csv(AREAS_FILENAME, encoding='utf-8')
+
+print(f"Saving intersection-over-union scores in {IOU_FILENAME}")
+df_iou.to_csv(IOU_FILENAME, encoding='utf-8')
+
+print(f"Saving recall scores in {RECALL_FILENAME}")
+df_recall.to_csv(RECALL_FILENAME, encoding='utf-8')
+
+print(f"Saving precision scores in {PRECISION_FILENAME}")
+df_precision.to_csv(PRECISION_FILENAME, encoding='utf-8')
+
+print(f"Saving false-positive rates in {FPR_FILENAME}")
+df_fpr.to_csv(FPR_FILENAME, encoding='utf-8')
