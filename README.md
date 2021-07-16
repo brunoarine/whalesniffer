@@ -1,38 +1,50 @@
 # Whalesniffer
 
-Whalesniffer locates whales in a downsized version of [Kaggle's Right Whale Recognition challenge data set] using different types of segmentation strategies. The study was presented as the capstone project for the Digital Image Processing classes at Universidade Estadual Paulista "Júlio de Mesquita Filho" (UNESP), Sorocaba, Brazil. The final report and slides can be read [here](https://github.com/brunoarine/whalesniffer/tree/main/docs) (Portuguese only).
+Whalesniffer locates whales in aerial images using different types of segmentation strategies. The study was presented as the capstone project for the Digital Image Processing classes at Universidade Estadual Paulista "Júlio de Mesquita Filho" (UNESP), Sorocaba, Brazil. For more detailed information, please read my [project report](https://github.com/brunoarine/whalesniffer/tree/main/docs) (translated from Portuguese).
+
+![](./reports/images/HistSimilarity-best-1.png)
+
+The data set provided in this repository is a downscaled version of [Kaggle's Right Whale Recognition challenge data set](https://www.kaggle.com/c/noaa-right-whale-recognition/data). The image files were resized to 640x480 px to reduce disk usage and execution time.
 
 ## Prerequisites
+- matplotlib 3.4.2
+- pandas 1.2.5
+- scikit_image 0.18.2
+- scipy 1.7.0
+- numpy 1.20.3
+- mahotas 1.4.11
+- scikit_learn 0.24.2
+
+You can install the needed libraries by typing the following in your terminal:
+
+```shell
+pip install -r requirements.txt
+```
 
 ## Installation
 
 Type the following in your shell or git prompt:
 
+```shell
 git clone https://github.com/brunoarine/whalesniffer.git
+```
 
 ## Usage
 
-Then open the folder and type:
+Open the folder and type:
 
+```shell
 python run.py
+```
+The program will try different strategies and will output a table containing execution time and IoU stats for each
+strategy. Additional data will be stored in:
 
-# Motivation
-
-The North Atlantic Right Whale (_Eubalenae glacialis_) is currently represented by no more than 500 individuals globally. Thus, obtaining information about each individual's health and conditions is urgent so that preservation entities can protect them from extinction in the company of the scientific community. To track and monitor the population, experts photograph right whales by aerial survey and manually compared them with an online photo-identification catalog. The identification process takes time, making individual tracking for biological sampling, acoustic recording, and various relevant medical assessments difficult. Currently, only a few professionals can visually identify each whale present in the photos when they emerge. That sounds like an excellent job for machine learning! ;)
-
-## Objective
-
-In 2015, Kaggle and NOAA (National Oceanic and Atmospheric Administration) made available more than 8 gigabytes of images, free of charge, in a contest for the development of algorithms capable of individually identifying each whale specimen contained in the photos. The problem is that the images were not annotated.
-
-So this project is an attempt at tackling the first step of an image recognition pipeline: **segmentation**. The study was presented as a capstone project for the Digital Image Processing class in my Environmental Sciences master's degree at Universidade Estadual Paulista "Júlio de Mesquita Filho" (UNESP).
-
-## Used tools
-
-The algorithms were written in Python 2.7.6 using the libraries Scikit-Image, OpenCV, and NumPy.
+- `/reports/`: estimated whale rectangle for each image file, along with some performance metrics (in csv format).
+- `/reports/images`: two of the best and worst cases for each segmentation strategy.
 
 ## Methodology
 
-The pre and post processing steps for this work are shown in the flowchart below:
+The pre and post-processing steps for this work are shown in the flowchart below:
 
 <p align="center">
 <img src="./docs/img/fluxogram.png">
