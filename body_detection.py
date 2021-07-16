@@ -6,12 +6,14 @@ import glob
 import cv2
 import pandas as pd
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 import whalesniffer.body
 from whalesniffer.utils import pathutils
 from whalesniffer.utils import evaluate_score
 
-SHOW_THUMBS = True
-IMG_FILES = 'data/images/raw/*.*'
+SAVE_FIGURES = True
+IMG_DIR = 'data/images/raw/'
+REPORT_DIR = 'reports/images/'
 
 def imhist(img, range=None):
     """Plot image histogram using 256 bins.
@@ -19,18 +21,41 @@ def imhist(img, range=None):
     plt.hist(img.flatten(), 256, color='black', range=range)
 
 
+def save_result_img(images, label):
+    """Plot selected cases.
+    """
+    for filenum, filename in enumerate(images.index):
+        p0 = tuple(df_areas.loc[filename, model][0][::-1])
+        p1 = tuple(df_areas.loc[filename, model][1][::-1])
+        a0 = tuple(df_areas.loc[filename, "Actual"][0][::-1])
+        a1 = tuple(df_areas.loc[filename, "Actual"][1][::-1])
+
+        fig, ax = plt.subplots()
+        img = plt.imread(IMG_DIR + filename)
+        cv2.rectangle(img, p0, p1, (0, 255, 0), 2)
+        cv2.rectangle(img, a0, a1, (0, 0, 255), 2)
+
+        custom_lines = [Line2D([0], [0], color="green", lw=2),
+                        Line2D([0], [0], color="blue", lw=2)]
+
+        ax.legend(custom_lines, ['predicted', 'true'])
+
+        plt.title(u'{}\n(overlap = {:.2f}, coverage = {:.2f})'
+                  .format(model, df_iou.loc[filename, model], df_recall.loc[filename, model]))
+        plt.imshow(img)
+        plt.tight_layout()
+        plt.savefig(f'{REPORT_DIR}{label}_{filenum}.png')
+
 # Load list of test images
 ground_truth = whalesniffer.load_annotations('data/annotations.json')
 
-filelist = glob.glob(IMG_FILES)
+filelist = glob.glob(IMG_DIR + "*.*")
 y_actual = [ground_truth[pathutils.strip_path(x)] for x in filelist]
-
-
 
 models = (
     (u'Clustering', whalesniffer.body.Clustering()),
-    (u'Bayesian', whalesniffer.body.Bayesian()),
-    (u'Manual', whalesniffer.body.Manual())
+    #(u'Bayesian', whalesniffer.body.Bayesian()),
+    #(u'Manual', whalesniffer.body.Manual())
 )
 
 index_names = [pathutils.strip_path(x) for x in filelist]
@@ -65,41 +90,12 @@ for model_name, model in models:
 
 df_areas['Actual'] = y_actual
 
-if SHOW_THUMBS:
+if SAVE_FIGURES:
     for model in df_iou:
-        worst = df_iou[model].sort_values()[:2]
+        save_result_img(images=df_iou[model].sort_values()[:2], label="worst")
+        save_result_img(images=df_iou[model].sort_values(ascending=False)[:2], label="best")
 
-        for filename in worst.index:
-            plt.figure(figsize=(10, 5))
-            p0 = tuple(df_areas.ix[filename][model][0][::-1])
-            p1 = tuple(df_areas.ix[filename][model][1][::-1])
-            a0 = tuple(df_areas.ix[filename]['Actual'][0][::-1])
-            a1 = tuple(df_areas.ix[filename]['Actual'][1][::-1])
-            plt.figure()
-            img = plt.imread(IMG_FILES + filename)
-            cv2.rectangle(img, p0, p1, (1, 0, 0), 2)
-            cv2.rectangle(img, a0, a1, (0, 0, 1), 2)
-            plt.title(u'{}\n(overlap = {:.2f}, coverage = {:.2f})'
-                      .format(model, df_iou.ix[filename][model], df_recall.ix[filename][model]))
-            plt.imshow(img)
-
-    for model in df_iou:
-        worst = df_iou[model].sort_values(ascending=False)[:2]
-
-        for filename in worst.index:
-            plt.figure(figsize=(10, 5))
-            p0 = tuple(df_areas.ix[filename][model][0][::-1])
-            p1 = tuple(df_areas.ix[filename][model][1][::-1])
-            a0 = tuple(df_areas.ix[filename]['Actual'][0][::-1])
-            a1 = tuple(df_areas.ix[filename]['Actual'][1][::-1])
-            plt.figure()
-            img = plt.imread(IMG_FILES + filename)
-            cv2.rectangle(img, p0, p1, (0, 1, 0), 2)
-            cv2.rectangle(img, a0, a1, (0, 0, 1), 2)
-            plt.title(u'{}\n(sobreposição = {:.2f}, abrangência = {:.2f})'
-                      .format(model, df_iou.ix[filename][model], df_recall.ix[filename][model]))
-            plt.imshow(img)
-
+# Print execution time statistics
 print(datetime.datetime.now())
 print(u"{:<25} {:<25}".format('Model', 'Execution time'))
 for model, stats in iter(statistics.items()):
