@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Nov 23 13:22:37 2015
-
-@author: soldeace
-"""
 
 def evaluate_score(a, b, score):
     '''
@@ -38,7 +33,7 @@ def evaluate_score(a, b, score):
         return tp/p
     elif score == 'fpr':
         return fp/n
-    elif score == 'pascal':
+    elif score == 'iou':
         return overlap_area/(a_area + b_area - overlap_area)
     elif score == 'precision':
         return tp/(tp+fp)
