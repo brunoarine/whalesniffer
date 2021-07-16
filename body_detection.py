@@ -11,7 +11,7 @@ from whalesniffer.utils import pathutils
 from whalesniffer.utils import evaluate_score
 
 SHOW_THUMBS = True
-IMG_DIR = '/data/images/'
+IMG_FILES = 'data/images/raw/*.*'
 
 def imhist(img, range=None):
     """Plot image histogram using 256 bins.
@@ -20,16 +20,18 @@ def imhist(img, range=None):
 
 
 # Load list of test images
-filelist = glob.glob(IMG_DIR)
 ground_truth = whalesniffer.load_annotations('data/annotations.json')
+
+filelist = glob.glob(IMG_FILES)
+y_actual = [ground_truth[pathutils.strip_path(x)] for x in filelist]
+
+
 
 models = (
     (u'Clustering', whalesniffer.body.Clustering()),
     (u'Bayesian', whalesniffer.body.Bayesian()),
     (u'Manual', whalesniffer.body.Manual())
 )
-
-y_actual = [ground_truth[pathutils.strip_path(x)] for x in filelist]
 
 index_names = [pathutils.strip_path(x) for x in filelist]
 col_names = [x for (x, _) in models]
@@ -74,7 +76,7 @@ if SHOW_THUMBS:
             a0 = tuple(df_areas.ix[filename]['Actual'][0][::-1])
             a1 = tuple(df_areas.ix[filename]['Actual'][1][::-1])
             plt.figure()
-            img = plt.imread(IMG_DIR + filename)
+            img = plt.imread(IMG_FILES + filename)
             cv2.rectangle(img, p0, p1, (1, 0, 0), 2)
             cv2.rectangle(img, a0, a1, (0, 0, 1), 2)
             plt.title(u'{}\n(overlap = {:.2f}, coverage = {:.2f})'
@@ -91,7 +93,7 @@ if SHOW_THUMBS:
             a0 = tuple(df_areas.ix[filename]['Actual'][0][::-1])
             a1 = tuple(df_areas.ix[filename]['Actual'][1][::-1])
             plt.figure()
-            img = plt.imread(IMG_DIR + filename)
+            img = plt.imread(IMG_FILES + filename)
             cv2.rectangle(img, p0, p1, (0, 1, 0), 2)
             cv2.rectangle(img, a0, a1, (0, 0, 1), 2)
             plt.title(u'{}\n(sobreposição = {:.2f}, abrangência = {:.2f})'

@@ -5,6 +5,9 @@ import numpy as np
 
 
 def load_annotations(filename):
+    """
+    Load annotations into a dictionary. Each key corresponds to the filename in the annotation directory.
+    """
     with open(filename) as data_file:
         table = {}
         data = json.load(data_file)        

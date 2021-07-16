@@ -10,7 +10,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_0.png"
+        "filename": "/data/images/raw/w_0.jpg"
     },
     {
         "annotations": [
@@ -23,7 +23,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_1.png"
+        "filename": "/data/images/raw/w_1.jpg"
     },
     {
         "annotations": [
@@ -36,7 +36,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_2.png"
+        "filename": "/data/images/raw/w_2.jpg"
     },
     {
         "annotations": [
@@ -49,7 +49,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_3.png"
+        "filename": "/data/images/raw/w_3.jpg"
     },
     {
         "annotations": [
@@ -62,7 +62,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_4.png"
+        "filename": "/data/images/raw/w_4.jpg"
     },
     {
         "annotations": [
@@ -75,7 +75,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_5.png"
+        "filename": "/data/images/raw/w_5.jpg"
     },
     {
         "annotations": [
@@ -88,7 +88,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_6.png"
+        "filename": "/data/images/raw/w_6.jpg"
     },
     {
         "annotations": [
@@ -101,7 +101,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_7.png"
+        "filename": "/data/images/raw/w_7.jpg"
     },
     {
         "annotations": [
@@ -114,7 +114,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_8.png"
+        "filename": "/data/images/raw/w_8.jpg"
     },
     {
         "annotations": [
@@ -127,7 +127,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_9.png"
+        "filename": "/data/images/raw/w_9.jpg"
     },
     {
         "annotations": [
@@ -140,7 +140,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_10.png"
+        "filename": "/data/images/raw/w_10.jpg"
     },
     {
         "annotations": [
@@ -153,7 +153,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_11.png"
+        "filename": "/data/images/raw/w_11.jpg"
     },
     {
         "annotations": [
@@ -166,7 +166,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_12.png"
+        "filename": "/data/images/raw/w_12.jpg"
     },
     {
         "annotations": [
@@ -179,7 +179,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_13.png"
+        "filename": "/data/images/raw/w_13.jpg"
     },
     {
         "annotations": [
@@ -192,7 +192,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_14.png"
+        "filename": "/data/images/raw/w_14.jpg"
     },
     {
         "annotations": [
@@ -205,7 +205,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_15.png"
+        "filename": "/data/images/raw/w_15.jpg"
     },
     {
         "annotations": [
@@ -218,7 +218,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_16.png"
+        "filename": "/data/images/raw/w_16.jpg"
     },
     {
         "annotations": [
@@ -231,7 +231,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_17.png"
+        "filename": "/data/images/raw/w_17.jpg"
     },
     {
         "annotations": [
@@ -244,7 +244,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_18.png"
+        "filename": "/data/images/raw/w_18.jpg"
     },
     {
         "annotations": [
@@ -257,7 +257,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_19.png"
+        "filename": "/data/images/raw/w_19.jpg"
     },
     {
         "annotations": [
@@ -270,7 +270,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_20.png"
+        "filename": "/data/images/raw/w_20.jpg"
     },
     {
         "annotations": [
@@ -283,7 +283,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_21.png"
+        "filename": "/data/images/raw/w_21.jpg"
     },
     {
         "annotations": [
@@ -296,7 +296,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_22.png"
+        "filename": "/data/images/raw/w_22.jpg"
     },
     {
         "annotations": [
@@ -309,7 +309,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_23.png"
+        "filename": "/data/images/raw/w_23.jpg"
     },
     {
         "annotations": [
@@ -322,7 +322,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_24.png"
+        "filename": "/data/images/raw/w_24.jpg"
     },
     {
         "annotations": [
@@ -335,7 +335,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_25.png"
+        "filename": "/data/images/raw/w_25.jpg"
     },
     {
         "annotations": [
@@ -348,7 +348,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_26.png"
+        "filename": "/data/images/raw/w_26.jpg"
     },
     {
         "annotations": [
@@ -361,7 +361,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_27.png"
+        "filename": "/data/images/raw/w_27.jpg"
     },
     {
         "annotations": [
@@ -374,7 +374,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_28.png"
+        "filename": "/data/images/raw/w_28.jpg"
     },
     {
         "annotations": [
@@ -387,7 +387,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_29.png"
+        "filename": "/data/images/raw/w_29.jpg"
     },
     {
         "annotations": [
@@ -400,7 +400,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_30.png"
+        "filename": "/data/images/raw/w_30.jpg"
     },
     {
         "annotations": [
@@ -413,7 +413,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_31.png"
+        "filename": "/data/images/raw/w_31.jpg"
     },
     {
         "annotations": [
@@ -426,7 +426,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_32.png"
+        "filename": "/data/images/raw/w_32.jpg"
     },
     {
         "annotations": [
@@ -439,7 +439,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_33.png"
+        "filename": "/data/images/raw/w_33.jpg"
     },
     {
         "annotations": [
@@ -452,7 +452,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_34.png"
+        "filename": "/data/images/raw/w_34.jpg"
     },
     {
         "annotations": [
@@ -465,7 +465,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_35.png"
+        "filename": "/data/images/raw/w_35.jpg"
     },
     {
         "annotations": [
@@ -478,7 +478,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_36.png"
+        "filename": "/data/images/raw/w_36.jpg"
     },
     {
         "annotations": [
@@ -491,7 +491,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_37.png"
+        "filename": "/data/images/raw/w_37.jpg"
     },
     {
         "annotations": [
@@ -504,7 +504,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_38.png"
+        "filename": "/data/images/raw/w_38.jpg"
     },
     {
         "annotations": [
@@ -517,7 +517,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_39.png"
+        "filename": "/data/images/raw/w_39.jpg"
     },
     {
         "annotations": [
@@ -530,7 +530,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_40.png"
+        "filename": "/data/images/raw/w_40.jpg"
     },
     {
         "annotations": [
@@ -543,7 +543,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_41.png"
+        "filename": "/data/images/raw/w_41.jpg"
     },
     {
         "annotations": [
@@ -556,7 +556,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_42.png"
+        "filename": "/data/images/raw/w_42.jpg"
     },
     {
         "annotations": [
@@ -569,7 +569,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_43.png"
+        "filename": "/data/images/raw/w_43.jpg"
     },
     {
         "annotations": [
@@ -582,7 +582,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_44.png"
+        "filename": "/data/images/raw/w_44.jpg"
     },
     {
         "annotations": [
@@ -595,7 +595,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_45.png"
+        "filename": "/data/images/raw/w_45.jpg"
     },
     {
         "annotations": [
@@ -608,7 +608,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_46.png"
+        "filename": "/data/images/raw/w_46.jpg"
     },
     {
         "annotations": [
@@ -621,7 +621,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_47.png"
+        "filename": "/data/images/raw/w_47.jpg"
     },
     {
         "annotations": [
@@ -634,7 +634,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_48.png"
+        "filename": "/data/images/raw/w_48.jpg"
     },
     {
         "annotations": [
@@ -647,7 +647,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_49.png"
+        "filename": "/data/images/raw/w_49.jpg"
     },
     {
         "annotations": [
@@ -660,7 +660,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_50.png"
+        "filename": "/data/images/raw/w_50.jpg"
     },
     {
         "annotations": [
@@ -673,7 +673,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_51.png"
+        "filename": "/data/images/raw/w_51.jpg"
     },
     {
         "annotations": [
@@ -686,7 +686,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_52.png"
+        "filename": "/data/images/raw/w_52.jpg"
     },
     {
         "annotations": [
@@ -699,7 +699,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_53.png"
+        "filename": "/data/images/raw/w_53.jpg"
     },
     {
         "annotations": [
@@ -712,7 +712,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_54.png"
+        "filename": "/data/images/raw/w_54.jpg"
     },
     {
         "annotations": [
@@ -725,7 +725,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_55.png"
+        "filename": "/data/images/raw/w_55.jpg"
     },
     {
         "annotations": [
@@ -738,7 +738,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_56.png"
+        "filename": "/data/images/raw/w_56.jpg"
     },
     {
         "annotations": [
@@ -751,7 +751,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_57.png"
+        "filename": "/data/images/raw/w_57.jpg"
     },
     {
         "annotations": [
@@ -764,7 +764,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_58.png"
+        "filename": "/data/images/raw/w_58.jpg"
     },
     {
         "annotations": [
@@ -777,7 +777,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_59.png"
+        "filename": "/data/images/raw/w_59.jpg"
     },
     {
         "annotations": [
@@ -790,7 +790,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_60.png"
+        "filename": "/data/images/raw/w_60.jpg"
     },
     {
         "annotations": [
@@ -803,7 +803,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_61.png"
+        "filename": "/data/images/raw/w_61.jpg"
     },
     {
         "annotations": [
@@ -816,7 +816,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_62.png"
+        "filename": "/data/images/raw/w_62.jpg"
     },
     {
         "annotations": [
@@ -829,7 +829,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_63.png"
+        "filename": "/data/images/raw/w_63.jpg"
     },
     {
         "annotations": [
@@ -842,7 +842,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_64.png"
+        "filename": "/data/images/raw/w_64.jpg"
     },
     {
         "annotations": [
@@ -855,7 +855,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_65.png"
+        "filename": "/data/images/raw/w_65.jpg"
     },
     {
         "annotations": [
@@ -868,7 +868,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_66.png"
+        "filename": "/data/images/raw/w_66.jpg"
     },
     {
         "annotations": [
@@ -881,7 +881,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_67.png"
+        "filename": "/data/images/raw/w_67.jpg"
     },
     {
         "annotations": [
@@ -894,7 +894,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_68.png"
+        "filename": "/data/images/raw/w_68.jpg"
     },
     {
         "annotations": [
@@ -907,7 +907,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_69.png"
+        "filename": "/data/images/raw/w_69.jpg"
     },
     {
         "annotations": [
@@ -920,7 +920,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_70.png"
+        "filename": "/data/images/raw/w_70.jpg"
     },
     {
         "annotations": [
@@ -933,7 +933,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_71.png"
+        "filename": "/data/images/raw/w_71.jpg"
     },
     {
         "annotations": [
@@ -946,7 +946,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_72.png"
+        "filename": "/data/images/raw/w_72.jpg"
     },
     {
         "annotations": [
@@ -959,7 +959,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_73.png"
+        "filename": "/data/images/raw/w_73.jpg"
     },
     {
         "annotations": [
@@ -972,7 +972,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_74.png"
+        "filename": "/data/images/raw/w_74.jpg"
     },
     {
         "annotations": [
@@ -985,7 +985,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_75.png"
+        "filename": "/data/images/raw/w_75.jpg"
     },
     {
         "annotations": [
@@ -998,7 +998,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_76.png"
+        "filename": "/data/images/raw/w_76.jpg"
     },
     {
         "annotations": [
@@ -1011,7 +1011,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_77.png"
+        "filename": "/data/images/raw/w_77.jpg"
     },
     {
         "annotations": [
@@ -1024,7 +1024,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_78.png"
+        "filename": "/data/images/raw/w_78.jpg"
     },
     {
         "annotations": [
@@ -1037,7 +1037,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_79.png"
+        "filename": "/data/images/raw/w_79.jpg"
     },
     {
         "annotations": [
@@ -1050,7 +1050,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_80.png"
+        "filename": "/data/images/raw/w_80.jpg"
     },
     {
         "annotations": [
@@ -1063,7 +1063,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_81.png"
+        "filename": "/data/images/raw/w_81.jpg"
     },
     {
         "annotations": [
@@ -1076,7 +1076,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_82.png"
+        "filename": "/data/images/raw/w_82.jpg"
     },
     {
         "annotations": [
@@ -1089,7 +1089,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_83.png"
+        "filename": "/data/images/raw/w_83.jpg"
     },
     {
         "annotations": [
@@ -1102,7 +1102,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_84.png"
+        "filename": "/data/images/raw/w_84.jpg"
     },
     {
         "annotations": [
@@ -1115,7 +1115,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_85.png"
+        "filename": "/data/images/raw/w_85.jpg"
     },
     {
         "annotations": [
@@ -1128,7 +1128,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_86.png"
+        "filename": "/data/images/raw/w_86.jpg"
     },
     {
         "annotations": [
@@ -1141,7 +1141,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_87.png"
+        "filename": "/data/images/raw/w_87.jpg"
     },
     {
         "annotations": [
@@ -1154,7 +1154,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_88.png"
+        "filename": "/data/images/raw/w_88.jpg"
     },
     {
         "annotations": [
@@ -1167,7 +1167,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_89.png"
+        "filename": "/data/images/raw/w_89.jpg"
     },
     {
         "annotations": [
@@ -1180,7 +1180,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_90.png"
+        "filename": "/data/images/raw/w_90.jpg"
     },
     {
         "annotations": [
@@ -1193,7 +1193,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_91.png"
+        "filename": "/data/images/raw/w_91.jpg"
     },
     {
         "annotations": [
@@ -1206,7 +1206,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_92.png"
+        "filename": "/data/images/raw/w_92.jpg"
     },
     {
         "annotations": [
@@ -1219,7 +1219,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_93.png"
+        "filename": "/data/images/raw/w_93.jpg"
     },
     {
         "annotations": [
@@ -1232,7 +1232,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_94.png"
+        "filename": "/data/images/raw/w_94.jpg"
     },
     {
         "annotations": [
@@ -1245,7 +1245,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_95.png"
+        "filename": "/data/images/raw/w_95.jpg"
     },
     {
         "annotations": [
@@ -1258,7 +1258,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_96.png"
+        "filename": "/data/images/raw/w_96.jpg"
     },
     {
         "annotations": [
@@ -1271,7 +1271,7 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_97.png"
+        "filename": "/data/images/raw/w_97.jpg"
     },
     {
         "annotations": [
@@ -1284,6 +1284,6 @@
             }
         ],
         "class": "image",
-        "filename": "/data/images/raw/w_98.png"
+        "filename": "/data/images/raw/w_98.jpg"
     }
 ]
