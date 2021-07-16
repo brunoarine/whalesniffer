@@ -245,9 +245,11 @@ More than one segment can remain in the resulting image in this step. Assuming t
 
 There is no consensus in the computer vision community on the best way to evaluate segmentations (ÖZDEMIR et al., 2010). The list of available metrics is as extensive as research groups in the area and their pros and cons. Therefore, common sense should dictate the most relevant metric for the type of task the job wants to evaluate. It would not have practical significance for this work, for example, to use the "false-negative rate." How to estimate the number of false negatives if all the images in the test set are positive (that is, they have at least one whale)?
 
-The metric chosen to evaluate the performance of the algorithms in this work was the "overlap," as defined by the iou Visual Object Classification Challenge, which is a worldwide competition of computer vision algorithms considered a reference (UIJILINGS et al., 2013). The overlay formula is given by
+The metric chosen to evaluate the performance of the algorithms in this work was the "intersection over union" (or IoU) as defined by the Pascal Visual Object Classification Challenge, which is a worldwide competition of computer vision algorithms considered a reference (UIJILINGS et al., 2013). The overlay formula is given by
 
-$$ O = \frac{\text{area of overlap}}{\text{area of union}} $$
+<p align="center">
+<img src="https://render.githubusercontent.com/render/math?math=IoU = \frac{\text{area of overlap}}{\text{area of union}}">
+</p>
 
 The overlap may vary r between 0 and 1, where a value greater than 0.5 is deemed "detected." The above formula ensures that the algorithms are rewarded the closer the whale's estimated rectangle approaches the true rectangle. In contrast, the score is impaired if the whale is still within the estimated rectangle, but the estimated rectangle is excessively larger than the actual rectangle. Likewise, estimated rectangles that are much smaller than the real one will also be penalized.
 
