@@ -1,22 +1,14 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Nov 22 22:15:12 2015
-
-@author: Usuario
-"""
 
 import numpy as np
 from skimage.io import imread
-from skimage.segmentation import felzenszwalb, slic, quickshift
-from skimage.color import rgb2grey, rgb2lab
+from skimage.segmentation import slic, quickshift
+from skimage.color import rgb2grey
 import skimage
 from sklearn.cluster import AgglomerativeClustering
 import skimage.transform
-from pylab import figure, imshow
-
 from ..utils import color
 from ..utils import blob
-from ..utils import pathutils
 
 
 def resize_seg(seg,image):

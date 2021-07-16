@@ -1,16 +1,10 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Nov 26 21:28:57 2015
-
-@author: Usuario
-"""
 
 from pylab import imread, imshow, figure, colorbar
 import numpy as np
 from skimage.transform import resize
 from skimage.color import rgb2lab
 from skimage.filters import gaussian
-from skimage.filters import rank
 import mahotas
 from ..utils import blob
 from scipy import ndimage as ndi

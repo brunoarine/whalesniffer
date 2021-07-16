@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Nov 26 21:28:57 2015
-
-@author: Usuario
-"""
 
 from pylab import imread
 import numpy as np
@@ -13,9 +8,7 @@ from skimage.filters import gaussian
 from sklearn.cluster import KMeans
 import mahotas
 from scipy import ndimage as ndi
-
 from ..utils import blob
-from ..utils import color
 
 
 class Clustering:

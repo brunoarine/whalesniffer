@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Nov 23 09:32:05 2015
 
-@author: soldeace
-"""
 import json
 import numpy as np
+
 
 def load_annotations(filename):
     with open(filename) as data_file:

@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Nov 24 19:26:22 2015
 
-@author: Usuario
-"""
 from matplotlib.image import imread
 from matplotlib.pyplot import imshow, scatter, plot, colorbar
 from skimage.color import rgb2hsv, rgb2lab

@@ -7,14 +7,7 @@ from skimage.morphology import disk
 import mahotas
 from scipy import ndimage as ndi
 from skimage.io import imread
-from pylab import figure, imshow
-from sklearn.cluster import KMeans
 
-from ..utils import noise
-from ..utils import blob
-from ..utils import pathutils
-from ..utils import color
-from ..utils import gauss
 
 class Thresholding():
     '''

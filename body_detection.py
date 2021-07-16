@@ -103,8 +103,8 @@ print(u"{:<25} {:<25}".format('Model', 'Execution time'))
 for model, stats in iter(statistics.items()):
     print(u"{:<25} {:<25}".format(model, stats['total_time']))
 
-df_areas.to_csv('reports\\df_areas.csv', encoding='utf-8')
-df_recall.to_csv('reports\\df_recall.csv', encoding='utf-8')
-df_iou.to_csv('reports\\df_iou.csv', encoding='utf-8')
-df_precision.to_csv('reports\\df_precision.csv', encoding='utf-8')
-df_fpr.to_csv('reports\\df_fpr.csv', encoding='utf-8')
+df_areas.to_csv('reports/df_areas.csv', encoding='utf-8')
+df_recall.to_csv('reports/df_recall.csv', encoding='utf-8')
+df_iou.to_csv('reports/df_iou.csv', encoding='utf-8')
+df_precision.to_csv('reports/df_precision.csv', encoding='utf-8')
+df_fpr.to_csv('reports/df_fpr.csv', encoding='utf-8')

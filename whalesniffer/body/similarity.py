@@ -1,12 +1,9 @@
-#Finding whales for Kaggle's NOAA Right Whale Recognition Challenge
-#   https://www.kaggle.com/c/noaa-right-whale-recognition
+# -*- coding: utf-8 -*-
 
 import cv2
 import mahotas
 import numpy as np
-from pylab import imshow, figure
-
-from ..utils import blob, hist, pathutils, color
+from ..utils import blob, hist, color
 
 
 class Similarity():

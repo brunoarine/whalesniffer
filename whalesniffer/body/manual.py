@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Nov 26 21:28:57 2015
-
-@author: Usuario
-"""
 
 import numpy as np
 from skimage.color import rgb2lab
@@ -12,10 +7,8 @@ from skimage.morphology import disk
 from skimage.io import imread
 import mahotas
 from scipy import ndimage as ndi
-
 from ..utils import blob
 from ..utils import color
-
 
 
 class Manual:
