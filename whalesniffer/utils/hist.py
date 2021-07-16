@@ -18,10 +18,10 @@ def getHist(im):
 def divImage(im):
     ### Divide the image in four subimages
     height,width,channels = im.shape
-    im1 = im[0:height/2, 0:width/2]
-    im2 = im[0:height/2, width/2:width]
-    im3 = im[height/2:height, 0:width/2]
-    im4 = im[height/2:height, width/2:width]
+    im1 = im[0:height//2, 0:width//2]
+    im2 = im[0:height//2, width//2:width]
+    im3 = im[height//2:height, 0:width//2]
+    im4 = im[height//2:height, width//2:width]
     return([im1,im2,im3,im4])
 
 
@@ -52,7 +52,7 @@ def simHist(im, baseHist, stop):
     # histg = getHist(im)
     # CORREL: Other similarity measures may be tested
     sim = [cv2.compareHist(histg.flatten(), getHist(imx).flatten(),
-                           cv2.cv.CV_COMP_CORREL) for imx in images]
+                           cv2.HISTCMP_CORREL) for imx in images]
     for i in range(0,len(sim)):
         #This is the threshold to consider too different 
         if sim[i] < 0.25:

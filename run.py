@@ -1,15 +1,17 @@
 # -*- coding: utf-8 -*-
 
-import time
 import datetime
 import glob
+import time
+
 import cv2
-import pandas as pd
 import matplotlib.pyplot as plt
+import pandas as pd
 from matplotlib.lines import Line2D
+
 import whalesniffer.body
-from whalesniffer.utils import pathutils
 from whalesniffer.utils import evaluate_score
+from whalesniffer.utils import pathutils
 
 SAVE_FIGURES = True
 DATA_DIR = 'data/images/raw/'
@@ -27,7 +29,7 @@ FPR_FILENAME = "reports/fpr_score.csv"
 #     plt.hist(img.flatten(), 256, color='black', range=range)
 #
 
-def save_result_img(image_names, label):
+def save_result_img(image_names, label, model):
     """Plot selected cases.
     """
     for filenum, image_name in enumerate(image_names.index):
@@ -46,11 +48,11 @@ def save_result_img(image_names, label):
 
         ax.legend(custom_lines, ['predicted', 'true'])
 
-        plt.title(u'{}\n(overlap = {:.2f}, coverage = {:.2f})'
-                  .format(model, df_iou.loc[image_name, model], df_recall.loc[image_name, model]))
+        plt.title(u'{}\n(IoU = {:.2f})'.format(model, df_iou.loc[image_name, model]))
         plt.imshow(img)
         plt.tight_layout()
-        plt.savefig(f'{REPORT_IMG_DIR}{label}_{filenum}.png')
+        plt.savefig(f'{REPORT_IMG_DIR}{model}-{label}-{filenum}.png')
+
 
 # Load list of test image_names
 ground_truth = whalesniffer.load_annotations('data/annotations.json')
@@ -59,9 +61,9 @@ filelist = glob.glob(DATA_DIR + "*.*")
 y_actual = [ground_truth[pathutils.strip_path(x)] for x in filelist]
 
 models = (
-    (u'Clustering', whalesniffer.body.Clustering()),
-    #(u'Bayesian', whalesniffer.body.Bayesian()),
-    #(u'Manual', whalesniffer.body.Manual())
+    (u'K-Means', whalesniffer.body.Clustering()),
+    (u'Manual', whalesniffer.body.Manual()),
+    (u'Histogram Similarity', whalesniffer.body.Similarity()),
 )
 
 index_names = [pathutils.strip_path(x) for x in filelist]
@@ -74,7 +76,7 @@ df_precision = pd.DataFrame(index=index_names, columns=col_names)
 df_fpr = pd.DataFrame(index=index_names, columns=col_names)
 df_areas = pd.DataFrame(index=index_names, columns=col_names)
 
-statistics = {}
+time_stats = {}
 for model_name, model in models:
     t_start = time.time()
     y_predicted = model.predict(filelist)
@@ -92,20 +94,20 @@ for model_name, model in models:
     df_fpr[model_name] = fpr
     df_areas[model_name] = y_predicted
 
-    statistics[model_name] = {'total_time': t_total}
+    time_stats[model_name] = {'total_time': t_total}
 
 df_areas['Actual'] = y_actual
 
 if SAVE_FIGURES:
-    for model in df_iou:
-        save_result_img(image_names=df_iou[model].sort_values()[:2], label="worst")
-        save_result_img(image_names=df_iou[model].sort_values(ascending=False)[:2], label="best")
+    for model_name, _ in models:
+        save_result_img(image_names=df_iou[model_name].sort_values()[:2], label="worst", model=model_name)
+        save_result_img(image_names=df_iou[model_name].sort_values(ascending=False)[:2], label="best", model=model_name)
 
-# Print execution time statistics
+# Print execution time time_stats
 print(datetime.datetime.now())
-print(u"{:<25} {:<25}".format('Model', 'Execution time'))
-for model, stats in iter(statistics.items()):
-    print(u"{:<25} {:<25}".format(model, stats['total_time']))
+print(u"{:<25} {:<25} {:<25}".format('Model', 'Execution time', 'Avg. IoU'))
+for model, stats in iter(time_stats.items()):
+    print(u"{:<25} {:<25} {:<25}".format(model, stats['total_time'], df_iou[model].mean()))
 print("")
 
 print(f"Saving rectangles in {AREAS_FILENAME}")

@@ -4,6 +4,5 @@ from .thresholding import Thresholding
 from .superpixel import Superpixel
 from .similarity import Similarity
 from .deprecated_prototype import Prototype
-from .bayesian import Bayesian
 from .manual import Manual
 from .clustering import Clustering

@@ -57,7 +57,7 @@ class Similarity():
             
             ### POST
             # Erase smaller detected blobs
-            kernel = np.ones((h/51,h/51),np.uint8)            
+            kernel = np.ones((h//51,h//51),np.uint8)
             im = mahotas.erode(im[:,:,0], kernel)
             im = mahotas.dilate(im, kernel)            
             im = blob.largest_blob(im)
