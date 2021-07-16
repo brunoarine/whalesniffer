@@ -24,7 +24,7 @@ def threshold_gauss(image, n_dists=4):
     img = resize(image,(30,30))
     (h,w) = img.shape
     X = img.reshape(-1,1)    
-    model = sklearn.mixture.GMM(n_dists)
+    model = sklearn.mixture.GaussianMixture(n_dists)
     model.fit(X)    
     means = model.means_.ravel()
     p = means.argsort()

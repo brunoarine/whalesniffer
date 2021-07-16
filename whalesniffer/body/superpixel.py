@@ -3,7 +3,7 @@
 import numpy as np
 from skimage.io import imread
 from skimage.segmentation import slic, quickshift
-from skimage.color import rgb2grey
+from skimage.color import rgb2gray
 import skimage
 from sklearn.cluster import AgglomerativeClustering
 import skimage.transform
@@ -58,7 +58,7 @@ def seg_selection(seg, image_copy, image_norm):
     for seg_no in range(seg.max()+1):
         values = np.mean(image_norm[seg==seg_no], axis=0)
         ratio = np.mean(abs(values/values[0]-1))
-        img_grey = rgb2grey(image_copy)
+        img_grey = rgb2gray(image_copy)
         ratio_light = np.mean(img_grey[seg==seg_no])/np.mean(img_grey)
         
         #if ratio*ratio_light < ratio_min:
@@ -95,13 +95,13 @@ class Superpixel():
         for filename in filenames_list:
             image = imread(filename)
             img_copy = skimage.transform.resize(image,(100,100,3))
-            img_copy = skimage.filters.gaussian_filter(img_copy, sigma=0.5)
+            img_copy = skimage.filters.gaussian(img_copy, sigma=0.5)
             img_norm = color.normalize_RGBratio(img_copy, method=self.method)
             if self.algorithm == 'slic':
                 seg = slic(img_norm, n_segments=200,
                                                 max_iter=100,
                                                 enforce_connectivity=True,
-                                                max_size_factor=10)
+                                                max_size_factor=10,)
             elif self.algorithm == 'quickshift':
                 seg = quickshift(img_norm, kernel_size=3, sigma=0,
                                  convert2lab=True, max_dist=6, ratio=0.5)           

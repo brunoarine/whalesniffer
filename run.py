@@ -23,12 +23,6 @@ RECALL_FILENAME = "reports/recall_score.csv"
 FPR_FILENAME = "reports/fpr_score.csv"
 
 
-# def imhist(img, range=None):
-#     """Plot image histogram using 256 bins.
-#     """
-#     plt.hist(img.flatten(), 256, color='black', range=range)
-#
-
 def save_result_img(image_names, label, model):
     """Plot selected cases.
     """
@@ -61,9 +55,11 @@ filelist = glob.glob(DATA_DIR + "*.*")
 y_actual = [ground_truth[pathutils.strip_path(x)] for x in filelist]
 
 models = (
-    (u'K-Means', whalesniffer.body.Clustering()),
-    (u'Manual', whalesniffer.body.Manual()),
-    (u'Histogram Similarity', whalesniffer.body.Similarity()),
+    #(u'KMeans', whalesniffer.body.Clustering()),
+    #(u'Manual', whalesniffer.body.Manual()),
+    (u'HistSimilarity', whalesniffer.body.Similarity()),
+    (u'Thresholding', whalesniffer.body.Thresholding()),
+    (u'Superpixels', whalesniffer.body.Superpixel()),
 )
 
 index_names = [pathutils.strip_path(x) for x in filelist]

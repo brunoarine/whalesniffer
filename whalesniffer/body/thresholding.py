@@ -7,6 +7,7 @@ from skimage.morphology import disk
 import mahotas
 from scipy import ndimage as ndi
 from skimage.io import imread
+from ..utils import color, noise, gauss, blob
 
 
 class Thresholding():
@@ -76,7 +77,7 @@ class Thresholding():
             chan = color.scaler(chan)
             ### Executes further denoising, which helps later on
             #chan = noise.denoise(chan, mode=self.denoise_mode)
-            chan = gaussian_filter(chan, 5)
+            chan = gaussian(chan, 5)
             
             
             ### Finding binary edges in the smoothed image            

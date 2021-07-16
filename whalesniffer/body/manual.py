@@ -12,6 +12,9 @@ from ..utils import color
 
 
 class Manual:
+    """
+    Try to segmentate whales by identifying the largest and brightest blob in the image (after a gaussian blur)
+    """
 
     def predict(self, filenames_list, threshold=0.75):        
         if not isinstance(filenames_list, list):
