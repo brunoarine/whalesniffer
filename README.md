@@ -14,6 +14,7 @@ The data set provided in this repository is a downscaled version of [Kaggle's Ri
 - numpy 1.20.3
 - mahotas 1.4.11
 - scikit_learn 0.24.2
+- cv2 4.5.3
 
 You can install the needed libraries by typing the following in your terminal:
 
