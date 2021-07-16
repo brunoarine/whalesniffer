@@ -21,17 +21,17 @@ def imhist(img, range=None):
     plt.hist(img.flatten(), 256, color='black', range=range)
 
 
-def save_result_img(images, label):
+def save_result_img(image_names, label):
     """Plot selected cases.
     """
-    for filenum, filename in enumerate(images.index):
-        p0 = tuple(df_areas.loc[filename, model][0][::-1])
-        p1 = tuple(df_areas.loc[filename, model][1][::-1])
-        a0 = tuple(df_areas.loc[filename, "Actual"][0][::-1])
-        a1 = tuple(df_areas.loc[filename, "Actual"][1][::-1])
+    for filenum, image_name in enumerate(image_names.index):
+        p0 = tuple(df_areas.loc[image_name, model][0][::-1])
+        p1 = tuple(df_areas.loc[image_name, model][1][::-1])
+        a0 = tuple(df_areas.loc[image_name, "Actual"][0][::-1])
+        a1 = tuple(df_areas.loc[image_name, "Actual"][1][::-1])
 
         fig, ax = plt.subplots()
-        img = plt.imread(IMG_DIR + filename)
+        img = plt.imread(IMG_DIR + image_name)
         cv2.rectangle(img, p0, p1, (0, 255, 0), 2)
         cv2.rectangle(img, a0, a1, (0, 0, 255), 2)
 
@@ -41,12 +41,12 @@ def save_result_img(images, label):
         ax.legend(custom_lines, ['predicted', 'true'])
 
         plt.title(u'{}\n(overlap = {:.2f}, coverage = {:.2f})'
-                  .format(model, df_iou.loc[filename, model], df_recall.loc[filename, model]))
+                  .format(model, df_iou.loc[image_name, model], df_recall.loc[image_name, model]))
         plt.imshow(img)
         plt.tight_layout()
         plt.savefig(f'{REPORT_DIR}{label}_{filenum}.png')
 
-# Load list of test images
+# Load list of test image_names
 ground_truth = whalesniffer.load_annotations('data/annotations.json')
 
 filelist = glob.glob(IMG_DIR + "*.*")
@@ -92,8 +92,8 @@ df_areas['Actual'] = y_actual
 
 if SAVE_FIGURES:
     for model in df_iou:
-        save_result_img(images=df_iou[model].sort_values()[:2], label="worst")
-        save_result_img(images=df_iou[model].sort_values(ascending=False)[:2], label="best")
+        save_result_img(image_names=df_iou[model].sort_values()[:2], label="worst")
+        save_result_img(image_names=df_iou[model].sort_values(ascending=False)[:2], label="best")
 
 # Print execution time statistics
 print(datetime.datetime.now())
