@@ -4,7 +4,7 @@ Whalesniffer locates whales in aerial images using different types of segmentati
 
 ![](./reports/images/HistSimilarity-best-1.png)
 
-The data set provided in this repository is a downscaled version of [Kaggle's Right Whale Recognition challenge data set](https://www.kaggle.com/c/noaa-right-whale-recognition/data). The image files were resized to 640x480 px to reduce disk usage and execution time.
+The data set provided in this repository is a downsampled version of [Kaggle's Right Whale Recognition challenge data set](https://www.kaggle.com/c/noaa-right-whale-recognition/data). The image files comprise only the first hundred image from the original set, and they were resized to 640x480 px to reduce disk usage and execution time. All images were annotated by hand.
 
 ## Prerequisites
 - matplotlib 3.4.2
