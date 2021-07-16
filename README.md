@@ -1,4 +1,22 @@
-# Whalesniffer: right whale detection in aerial images
+# Whalesniffer
+
+Whalesniffer locates whales in a downsized version of [Kaggle's Right Whale Recognition challenge data set] using different types of segmentation strategies. The study was presented as the capstone project for the Digital Image Processing classes at Universidade Estadual Paulista "Júlio de Mesquita Filho" (UNESP), Sorocaba, Brazil. The final report and slides can be read [here](https://github.com/brunoarine/whalesniffer/tree/main/docs) (Portuguese only).
+
+## Prerequisites
+
+## Installation
+
+Type the following in your shell or git prompt:
+
+git clone https://github.com/brunoarine/whalesniffer.git
+
+## Usage
+
+Then open the folder and type:
+
+python run.py
+
+# Motivation
 
 The North Atlantic Right Whale (_Eubalenae glacialis_) is currently represented by no more than 500 individuals globally. Thus, obtaining information about each individual's health and conditions is urgent so that preservation entities can protect them from extinction in the company of the scientific community. To track and monitor the population, experts photograph right whales by aerial survey and manually compared them with an online photo-identification catalog. The identification process takes time, making individual tracking for biological sampling, acoustic recording, and various relevant medical assessments difficult. Currently, only a few professionals can visually identify each whale present in the photos when they emerge. That sounds like an excellent job for machine learning! ;)
 
