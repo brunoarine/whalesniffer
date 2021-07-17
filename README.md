@@ -118,7 +118,7 @@ Image correction takes place entirely on channel V, using the formula
 <img src="https://render.githubusercontent.com/render/math?math=O = I - I \ast G %2b 128">
 </p>
 
-, where I is channel V, and G is the Gaussian convolution mask. An example of a result can be seen in the image below.
+where I is channel V, and G is the Gaussian convolution mask. An example of a result can be seen in the image below.
 
 <p align="center">
 <img src="./docs/img/vignette_threshold.png">
@@ -223,7 +223,7 @@ After creating the superpixels, they are grouped into three larger groups using 
 <img src="./docs/img/slic_reduction.png">
 </p>
 
-_ number of superpixels reduced by agglomerative clustering (left) and selection of the cluster most compatible with the illumination of the original image (right)_
+_Number of superpixels reduced by agglomerative clustering (left) and selection of the cluster most compatible with the illumination of the original image (right)._
 
 After reducing the number of clusters, the most relevant cluster among the three estimated is selected. In the vast majority of the investigated photos, the whale's body has pixels of greater value in the R channel than in the other channels. Converting the RGB space to normalized RGB, to ensure that the selection method is standardized in different illuminations, the segment whose pixel ratio of the normalized R channel in relation to the rest of the image is the largest is selected (Figure 16 ).
 
