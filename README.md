@@ -112,7 +112,13 @@ However, for this work, I chose a significantly more straightforward solution. U
 
 I noticed experimentally that this Gaussian filter produced a more subtle gradient due to the nature of the mask, in contrast to the square mask of the medium filter, which creates distinct bands in the image.
 
-Image correction takes place entirely on channel V, using the formula O = I - IxG + 128, where I is channel V, and G is the Gaussian convolution mask. An example of a result can be seen in the image below.
+Image correction takes place entirely on channel V, using the formula 
+
+<p align="center">
+<img src="https://render.githubusercontent.com/render/math?math=O = I - I \ast G %2b 128">
+</p>
+
+, where I is channel V, and G is the Gaussian convolution mask. An example of a result can be seen in the image below.
 
 <p align="center">
 <img src="./docs/img/vignette_threshold.png">
@@ -179,9 +185,9 @@ _On the right, histogram of the original image. On the left, the histogram of th
 
 The Otsu method for calculating the threshold, as mentioned, assumes that the image contains two classes of pixels, whose histogram takes the form of a bimodal distribution. The algorithm performs an exhaustive search so that the intraclass variance is minimized, that is, the weighted sum of the variances of the two classes (OTSU, 1979).
 
-However, Otsu's method is incompatible with specific images whose histograms are multimodal distributions. That happens because of the presence of four distinct elements in the image: the water, the whale, the shadows, and the reflections that could not be removed in the pre-processing, either because the pixel values ​​are very close to those of the whale, either because the size of the impurities in the photo is larger than the mask used to filter them.
+However, Otsu's method is incompatible with specific images whose histograms are multimodal distributions. That happens because of the presence of four distinct elements in the image: the water, the whale, the shadows, and the reflections that could not be removed in the pre-processing, either because the pixel values are very close to those of the whale, either because the size of the impurities in the photo is larger than the mask used to filter them.
 
-This problem can be overcome by generalizing the Otsu method to more than one threshold, known as the Multilevel Otsu Method. Liu and Yu (2009) showed that the multilevel Otsu method is fully compatible with clustering methods, some of which are more efficient from a computational point of view. Therefore, instead of the Otsu method, the segmentation of the channel was done using a Gaussian mixture model. This is a probabilistic model, which assumes that the data distribution is formed by mixing a finite number of Gaussian distributions of unknown parameters. Since the histogram of the pixel values ​​of each main element of the image should follow approximately a normal distribution, the Gaussian mixture model seemed to be more appropriate than other clustering methods, such as the k-means method, for example, which assumes that the calculated sections have equivalent dimensions.
+This problem can be overcome by generalizing the Otsu method to more than one threshold, known as the Multilevel Otsu Method. Liu and Yu (2009) showed that the multilevel Otsu method is fully compatible with clustering methods, some of which are more efficient from a computational point of view. Therefore, instead of the Otsu method, the segmentation of the channel was done using a Gaussian mixture model. This is a probabilistic model, which assumes that the data distribution is formed by mixing a finite number of Gaussian distributions of unknown parameters. Since the histogram of the pixel values of each main element of the image should follow approximately a normal distribution, the Gaussian mixture model seemed to be more appropriate than other clustering methods, such as the k-means method, for example, which assumes that the calculated sections have equivalent dimensions.
 
 <p align="center">
 <img src="./docs/img/gaussian_histo.png">
@@ -201,7 +207,7 @@ The multimodal model allows calculating a more precise threshold for separating 
 
 #### 5.3) Superpixel grouping method
 
-The idea of ​​this segmentation method was first proposed by Ren and Malik (2003) and popularized by Achanta et al. (2010) through the algorithm called SLIC ( Simple Linear Iterative Clustering ). This algorithm performs a super-segmentation of the image using the k-means model and using all the pixel values ​​of all channels in the Lab color space as a reference.
+The idea of this segmentation method was first proposed by Ren and Malik (2003) and popularized by Achanta et al. (2010) through the algorithm called SLIC ( Simple Linear Iterative Clustering ). This algorithm performs a super-segmentation of the image using the k-means model and using all the pixel values of all channels in the Lab color space as a reference.
 
 <p align="center">
 <img src="./docs/img/slic.png">
@@ -239,7 +245,7 @@ Thanks to the recursiveness of the algorithm, scanning becomes more efficient, a
 
 For all the segmentation methods used, the next step is to eliminate small segments through the morphological opening operation (in which erosion is carried out, followed by the dilation of the image).
 
-More than one segment can remain in the resulting image in this step. Assuming that the whale is the largest front element in all photos, filter it so that only the largest segment remains. The detection and calculation of each spot present in the image is done through growing regions. In this process, the binary image is scanned until a pixel of the desired value is found (in this case, 1). From this point on, the image is scanned bilaterally to estimate how far this segment and value 1 propagates. After scanning the entire continuous range of values ​​and locating the extent of the stain, it has the area counted and its pixels removed from the image. The algorithm then continues its search from the previous point.
+More than one segment can remain in the resulting image in this step. Assuming that the whale is the largest front element in all photos, filter it so that only the largest segment remains. The detection and calculation of each spot present in the image is done through growing regions. In this process, the binary image is scanned until a pixel of the desired value is found (in this case, 1). From this point on, the image is scanned bilaterally to estimate how far this segment and value 1 propagates. After scanning the entire continuous range of values and locating the extent of the stain, it has the area counted and its pixels removed from the image. The algorithm then continues its search from the previous point.
 
 ## Results and discussion
 
